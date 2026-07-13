@@ -20,17 +20,12 @@
 
     <main id="top">
       <section class="hero">
-        <div class="hero-grid shell">
+        <div class="hero-grid hero-grid-single shell">
           <div>
             <p class="kicker">NeurIPS 2026 · Sydney</p>
             <h1>Autonomous <em>ML</em> Research</h1>
             <p class="hero-copy">Autonomous research, human judgment: rethinking ML research through a discussant-led workshop.</p>
             <div class="hero-action"><a class="text-link" href="#call">Read the call for papers</a></div>
-          </div>
-          <div class="field" role="img" aria-label="A field connecting autonomous agents, human authors, and judgment">
-            <span class="field-axis-x"></span><span class="field-axis-y"></span>
-            <span class="field-node one"></span><span class="field-node two"></span><span class="field-node three"></span>
-            <span class="field-label agent">Agent</span><span class="field-label author">Human author</span><span class="field-label judgment">Judgment</span>
           </div>
         </div>
       </section>
@@ -54,6 +49,10 @@
               <p>Given the development of agent harnesses that can pursue long-horizon tasks, we believe it is time for the community to formally recognize and plan for the inevitability of impactful autonomous research.</p>
               <p>Our goal is to make autonomous research meaningful in a way that strengthens the ML community without undermining the role of human researchers. The workshop brings this structural change into the open and anchors autonomous research in human judgment and participation.</p>
             </div>
+            <blockquote class="pandora">
+              <p>Just as Pandora's Box cannot be closed, the effect of frontier models on researchers now and in the future cannot be undone.</p>
+              <p>However, just as Hope was discovered at the bottom of the box, we believe the normalization of autonomous research will foster an environment where scientists can engage in open, constructive dialogue about AI-generated science.</p>
+            </blockquote>
             <div class="question-list">
               <div class="question-row"><span>01</span><p>What is the best way to responsibly include autonomous research?</p></div>
               <div class="question-row"><span>02</span><p>How should people evaluate, curate, and take responsibility for AI-generated science?</p></div>
@@ -68,13 +67,19 @@
           <p class="section-label">Call for papers</p>
           <div>
             <h2>What belongs here?</h2>
-            <p class="lead">We seek ML research substantially carried out by autonomous agents, alongside work on the systems, evaluation methods, and norms that make autonomous research possible.</p>
-            <div class="scope-list spaced">
-              <div class="scope-item"><span class="index">01</span><div><h3>End-to-end autonomous research</h3><p>A scientific manuscript where an agent carried out research end-to-end or was responsible for the central claims—particularly generating a hypothesis and validating it with experimental or theoretical evidence.</p></div></div>
-              <div class="scope-item"><span class="index">02</span><div><h3>Systems for autonomous discovery</h3><p>Agent harnesses, environments, benchmarks, and infrastructure that enable autonomous ML research loops, replication, or algorithmic discovery.</p></div></div>
-              <div class="scope-item"><span class="index">03</span><div><h3>Evaluation, norms, and governance</h3><p>Research on attribution, disclosure, reproducibility, safety, review, incentives, and the institutional consequences of autonomous research.</p></div></div>
+            <p class="lead">This workshop is for ML research substantially produced by an autonomous agent: work where an agent carried out research end-to-end, or was responsible for a central claim of the paper.</p>
+            <div class="eligibility spaced">
+              <p class="eyebrow">Eligibility</p>
+              <p>In particular, we are interested in agents that generate a hypothesis and validate it with experimental or theoretical evidence. A paper about an autonomous research system, without a qualifying research result produced by that system, is outside the scope of this workshop.</p>
             </div>
-            <div class="notice"><span class="section-label">A note on scope</span><p>The workshop is specifically focused on machine learning research—not autonomous research in unrelated scientific domains—while welcoming relevant lessons from adjacent fields.</p></div>
+
+            <div class="paper-structure">
+              <div class="structure-intro"><p class="eyebrow">Required paper structure</p><h3>One submission, two parts.</h3><p>Every paper should let readers evaluate both the research contribution and the process that produced it.</p></div>
+              <article class="paper-part"><span>Part 1</span><h3>AI-generated research</h3><p>Present the research itself: the hypothesis, method, evidence, and central claims generated or developed by the agent.</p></article>
+              <article class="paper-part"><span>Part 2</span><h3>System design</h3><p>Describe the agent, harness, tools, research loop, human interventions, provenance, and verification used to produce the work.</p></article>
+            </div>
+
+            <div class="notice"><span class="section-label">A note on scope</span><p>The workshop is specifically focused on machine learning research—not autonomous research in unrelated scientific domains.</p></div>
 
             <div class="author-details">
               <details>
@@ -112,14 +117,18 @@
         <div class="section-grid shell">
           <p class="section-label">Discussant format</p>
           <div>
-            <h2>Keep human judgment in the foreground.</h2>
-            <div class="prose"><p>If autonomous systems can produce candidate papers at scale, the scarce human contribution becomes the ability to evaluate AI-generated claims.</p><p>The human author presents a brief summary, then transitions into a dialogue with a human reviewer. The discussant explains why the paper was accepted, what limitations remain, and why its central claim is worthy of attention.</p></div>
-            <div class="process spaced">
-              <div class="process-step"><span>01</span><h3>Autonomous research</h3><p>An agent substantially carries out the research loop.</p></div>
-              <div class="process-step"><span>02</span><h3>Human authorship</h3><p>Authors curate, verify, disclose, and take responsibility.</p></div>
-              <div class="process-step"><span>03</span><h3>Blind review</h3><p>Anonymous evaluation remains separate from the decision.</p></div>
-              <div class="process-step"><span>04</span><h3>Open discussion</h3><p>An accepting reviewer joins the author as discussant.</p></div>
+            <h2>What is a discussant?</h2>
+            <p class="lead">A discussant is a non-author whose role is to help the audience understand and engage with an accepted paper. The model is common in the social sciences, but remains unfamiliar in machine learning.</p>
+            <div class="prose spaced"><p>Traditionally, accepted conference papers are presented by their authors, while reviewers disappear into the background. For autonomous research, we propose that the allocation of attention be reversed. If autonomous systems can produce candidate papers at scale, the scarce human contribution becomes the ability to evaluate AI-generated claims.</p><p>The discussant is not a co-author and does not replace the author. They bring an independent, informed perspective to the work: why its central claim deserves attention, which evidence is most persuasive, what limitations remain, and what the community should discuss next.</p></div>
+
+            <div class="discussant-lifecycle">
+              <article><span>01 · Review</span><h3>Blind decision-making</h3><p>Before decisions, submissions remain blind and reviewers remain anonymous. Reviewers assess the claims independently under the NeurIPS conflict-of-interest policy.</p></article>
+              <article><span>02 · Selection</span><h3>An accepting reviewer</h3><p>After acceptance, a discussant is chosen from reviewers who advocated acceptance—first from volunteers, otherwise by random selection—and is notified before the workshop.</p></article>
+              <article><span>03 · Preparation</span><h3>An independent reading</h3><p>The discussant prepares a concise account of the paper's contribution, strongest evidence, unresolved limitations, and questions for the author. Their role is thoughtful evaluation, not unqualified endorsement.</p></article>
+              <article><span>04 · At the workshop</span><h3>Summary, response, dialogue</h3><p>The author gives a brief summary. The discussant then responds, and the session becomes a dialogue with the author and audience rather than a conventional one-way talk.</p></article>
             </div>
+
+            <div class="notice"><span class="section-label">Visible credit</span><p>After acceptance, accepted papers will be published with their reviews and reviewers. The discussant will be identified and credited for their contribution to the session.</p></div>
             <div class="expandable-block">
               <details>
                 <summary>View the proposed one-day schedule</summary>
@@ -167,7 +176,7 @@
             <div class="faq">
               <details><summary>What counts as autonomous ML research?</summary><div class="detail-body"><p>ML research substantially produced by an autonomous agent—ideally work where an agent carried out the process end-to-end or was responsible for the central claims, including hypothesis generation and experimental or theoretical validation.</p></div></details>
               <details><summary>Can humans still be authors?</summary><div class="detail-body"><p>Yes. Authorship remains exclusively human. Authors curate the work, verify its claims, disclose agent involvement, and remain responsible for the final submission.</p></div></details>
-              <details><summary>Can I submit work about autonomous research systems?</summary><div class="detail-body"><p>Yes. We welcome papers on systems that produce autonomous research, including environments, harnesses, evaluation methods, replication infrastructure, and governance.</p></div></details>
+              <details><summary>Can I submit a systems-only paper?</summary><div class="detail-body"><p>No. A submission must include qualifying ML research carried out end-to-end by an autonomous agent or contain a central claim for which an agent was responsible. The system that produced the research should be documented in Part 2 of that paper.</p></div></details>
               <details><summary>Is the workshop archival?</summary><div class="detail-body"><p>No. This is a non-archival workshop, allowing authors to continue developing and submitting their work elsewhere, subject to those venues' policies.</p></div></details>
             </div>
           </div>
