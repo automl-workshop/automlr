@@ -213,6 +213,9 @@ h1 em { color: var(--blue); font-style: normal; }
 
 .section { padding: 112px 0; border-bottom: 1px solid var(--line); }
 .section.compact { padding: 78px 0; }
+.section[id] { scroll-margin-top: 28px; }
+.spaced { margin-top: 58px; }
+.quiet-note { margin: 20px 0 0; color: var(--muted); font-size: .82rem; }
 
 .section-grid {
   display: grid;
@@ -328,6 +331,13 @@ summary::-webkit-details-marker { display: none; }
 summary::after { content: "+"; position: absolute; right: 0; color: var(--blue); font-family: Arial, sans-serif; }
 details[open] summary::after { content: "−"; }
 details p { max-width: 700px; margin: 0 0 24px; color: var(--muted); }
+.detail-body { padding: 0 0 4px; }
+.detail-body p:last-child { margin-bottom: 20px; }
+.author-details { margin-top: 55px; border-top: 1px solid var(--ink); }
+.expandable-block { margin-top: 52px; border-top: 1px solid var(--ink); }
+.expandable-block .schedule { margin-bottom: 22px; }
+.expandable-block .schedule-row:first-child { border-top: 1px solid var(--line); }
+.submit-section { background: var(--surface); }
 
 .site-footer { padding: 60px 0 32px; background: var(--ink); color: #e9e9e4; }
 .footer-top { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; padding-bottom: 70px; }
@@ -338,7 +348,7 @@ details p { max-width: 700px; margin: 0 0 24px; color: var(--muted); }
 .footer-bottom { display: flex; justify-content: space-between; gap: 30px; padding-top: 20px; border-top: 1px solid #444641; color: #9fa19b; font-size: .68rem; }
 
 @media (max-width: 900px) {
-  .nav-links a:not(.submit-link) { display: none; }
+  .nav-links { gap: 18px; }
   .hero, .hero-grid { min-height: auto; }
   .hero-grid { grid-template-columns: 1fr; padding: 85px 0; }
   .field { width: min(78vw, 470px); justify-self: start; }
@@ -356,6 +366,7 @@ details p { max-width: 700px; margin: 0 0 24px; color: var(--muted); }
   .shell { width: min(calc(100% - 28px), var(--max)); }
   .site-nav { min-height: 64px; }
   .wordmark > span:last-child { display: none; }
+  .nav-links a:not(.submit-link) { display: none; }
   h1 { font-size: clamp(3.65rem, 18vw, 5.6rem); }
   .hero-grid { padding: 65px 0; gap: 55px; }
   .hero-copy { font-size: 1.2rem; }
