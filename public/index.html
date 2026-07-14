@@ -5,44 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="The NeurIPS 2026 Workshop for Autonomous Machine Learning Research brings autonomous research and human judgment into open conversation.">
     <title>Workshop for Autonomous Machine Learning Research · NeurIPS 2026</title>
+
+    <meta name="theme-color" content="#F4F0E6">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Workshop for Autonomous Machine Learning Research · NeurIPS 2026">
+    <meta property="og:description" content="A discussant-led workshop rethinking how autonomous research enters the machine learning community.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://automlr.com">
+    <meta property="og:image" content="/og.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Workshop for Autonomous Machine Learning Research · NeurIPS 2026">
+    <meta name="twitter:description" content="A discussant-led workshop rethinking how autonomous research enters the machine learning community.">
+    <meta name="twitter:image" content="/og.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F4F0E6'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23B4531F' stroke-width='1.5'/%3E%3Ctext x='16' y='20.5' font-family='Georgia,serif' font-size='9.5' fill='%23211E1A' text-anchor='middle'%3EA%2FML%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,400..500;1,6..72,400..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+
     <header class="site-header">
       <nav class="site-nav shell" aria-label="Primary navigation">
-        <a class="wordmark" href="#top"><span class="mark">A/ML</span><span>Workshop for Autonomous Machine Learning Research</span></a>
+        <a class="wordmark" href="#top" aria-label="Home — Workshop for Autonomous Machine Learning Research"><span class="mark" aria-hidden="true">A/ML</span><span>Workshop for Autonomous Machine Learning Research</span></a>
         <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#call">Call</a>
-          <a href="#format">Format</a>
-          <a href="#people">People</a>
-          <a class="button-link" href="#submit">Submit</a>
+          <a class="nav-index" href="#about">About<i>(1)</i></a>
+          <a class="nav-index" href="#call">Call<i>(2)</i></a>
+          <a class="nav-index" href="#format">Format<i>(3)</i></a>
+          <a class="nav-index" href="#people">People<i>(4)</i></a>
+          <a class="button-link nav-index" href="#submit">Submit<i>(5)</i></a>
         </div>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero shell">
-        <p class="eyebrow">NeurIPS 2026 · Sydney</p>
-        <h1>Workshop for Autonomous <em>Machine Learning</em> Research</h1>
-        <p class="hero-deck">Autonomous research, human judgment.</p>
-        <p class="hero-summary">A discussant-led workshop rethinking how autonomous research enters the machine learning community.</p>
-        <a class="arrow-link" href="#call">Read the call for papers</a>
+        <p class="eyebrow" data-reveal>NeurIPS 2026 · Sydney</p>
+        <h1 data-reveal>Workshop for Autonomous <em>Machine Learning</em> Research</h1>
+        <p class="hero-deck" data-reveal>Autonomous research, human judgment.</p>
+        <p class="hero-summary" data-reveal>A discussant-led workshop rethinking how autonomous research enters the machine learning community.</p>
+        <a class="arrow-link" href="#call" data-reveal>Read the call for papers <span aria-hidden="true">&#8600;</span></a>
       </section>
 
-      <div class="facts">
-        <div class="facts-grid shell">
-          <div><span>Venue</span><strong>NeurIPS 2026</strong></div>
-          <div><span>Location</span><strong>Sydney · In person</strong></div>
-          <div><span>Workshop date</span><strong class="pending">To be announced</strong></div>
-          <div><span>Format</span><strong>Non-archival · Discussant-led</strong></div>
-        </div>
+      <div class="facts" data-scroll>
+        <dl class="facts-grid shell">
+          <div><dt>Venue</dt><dd>NeurIPS 2026</dd></div>
+          <div><dt>Location</dt><dd>Sydney · In person</dd></div>
+          <div><dt>Workshop date</dt><dd><span class="pending">To be announced<span class="sr-only"> (status: pending)</span></span></dd></div>
+          <div><dt>Format</dt><dd>Non-archival · Discussant-led</dd></div>
+        </dl>
       </div>
 
       <section class="page-section" id="about">
         <div class="article-layout shell">
           <p class="section-index"><span>01</span> Why this workshop</p>
-          <div class="article-body">
+          <div class="article-body" data-scroll>
             <h2>Do conferences exist for science, or for scientists?</h2>
             <div class="prose">
               <p>The research process comprises the formulation of a hypothesis, the design of an experiment, and the judgment of a result. The implicit assumption that this process is a fundamentally human act is suddenly being challenged by autonomous research.</p>
@@ -50,7 +76,7 @@
               <p>Our goal is to make autonomous research meaningful in a way that strengthens the ML community without undermining the role of human researchers. The workshop brings this structural change into the open and anchors autonomous research in human judgment and participation.</p>
             </div>
             <blockquote>
-              <p>Just as Pandora’s Box cannot be closed, the effect of frontier models on researchers now and in the future cannot be undone.</p>
+              <p>Just as Pandora&rsquo;s Box cannot be closed, the effect of frontier models on researchers now and in the future cannot be undone.</p>
               <p>However, just as Hope was discovered at the bottom of the box, we believe the normalization of autonomous research will foster an environment where scientists can engage in open, constructive dialogue about AI-generated science.</p>
             </blockquote>
           </div>
@@ -60,13 +86,13 @@
       <section class="page-section" id="call">
         <div class="article-layout shell">
           <p class="section-index"><span>02</span> What to submit</p>
-          <div class="article-body">
+          <div class="article-body has-margin" data-scroll>
             <h2>What belongs here?</h2>
-            <p class="lead">This workshop is for ML research in which an autonomous agent either conducted the research end-to-end or made the decisive contribution to the paper’s primary result.</p>
+            <p class="lead">This workshop is for ML research in which an autonomous agent either conducted the research end-to-end or made the decisive contribution to the paper&rsquo;s primary result.</p>
 
-            <aside class="definition">
+            <aside class="definition margin-note" aria-label="The primary-result test">
               <h3>The primary-result test</h3>
-              <p>The primary result must be stated in the abstract. The agent’s contribution is decisive if, without it, that result would not hold or the paper’s main conclusions would be materially different.</p>
+              <p>The primary result must be stated in the abstract. The agent&rsquo;s contribution is decisive if, without it, that result would not hold or the paper&rsquo;s main conclusions would be materially different.</p>
             </aside>
 
             <div class="paper-intro">
@@ -74,21 +100,29 @@
               <h3>One submission, two parts.</h3>
               <p>Every paper should let readers evaluate both the research contribution and the process that produced it.</p>
             </div>
-            <div class="paper-parts">
-              <article>
+            <ol class="paper-parts">
+              <li>
                 <span>Part 1</span>
                 <h3>AI-generated research</h3>
                 <p>Present the research itself: the hypothesis, method, evidence, and primary result generated or developed by the agent.</p>
-              </article>
-              <article>
+              </li>
+              <li>
                 <span>Part 2</span>
                 <h3>System design</h3>
                 <p>Describe the agent, harness, tools, research loop, human interventions, provenance, and verification used to produce the work.</p>
-              </article>
-            </div>
+              </li>
+            </ol>
 
             <p class="scope-note"><strong>Scope.</strong> A systems-only paper is not eligible without a qualifying research result. The workshop is focused specifically on machine learning research, rather than autonomous research in unrelated scientific domains.</p>
-            <p class="scope-note"><strong>Human authorship.</strong> Authorship remains exclusively human. Authors curate the work, verify its claims, disclose agent involvement, and remain responsible for the final submission. <span class="pending">Disclosure policy pending</span></p>
+            <p class="scope-note"><strong>Human authorship.</strong> Authorship remains exclusively human. Authors curate the work, verify its claims, disclose agent involvement, and remain responsible for the final submission.</p>
+
+            <div class="disclosure">
+              <p class="eyebrow">Disclosure policy</p>
+              <p>Only humans are eligible to be authors, and authors are fully responsible for every part of the submission&mdash;text, figures, methodology, and references&mdash;regardless of the tools or agents used to produce it. A submission may not be wholly AI-generated and unverified: a human author must curate the work, verify every claim, and take full accountability for it. The paper as submitted is a human-authored, human-verified artifact, even when an autonomous agent made the decisive research contribution.</p>
+              <p>Because this workshop&rsquo;s premise is that an autonomous agent may drive the research, agent and LLM involvement must be disclosed and documented. The agent, its harness, tools, research loop, human interventions, provenance, and verification belong in <strong>Part 2 (System design)</strong>&mdash;mirroring NeurIPS policy that any LLM use forming an important, original, or non-standard part of the method be described alongside the experimental setup. Routine writing aids such as grammar and spell-checking or minor copy-editing need not be documented; use of an agent or model as part of the method must be.</p>
+              <p>Authors are responsible for ensuring that all content is correct and original and for verifying tool outputs&mdash;including guarding against hallucinated results, figures, or citations. Scientific integrity rests with the human authors.</p>
+              <p class="disclosure-note">Final, exact disclosure instructions will ship with the submission portal; the above is provisional and consistent with the NeurIPS 2025 policy on the use of large language models.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -96,20 +130,20 @@
       <section class="page-section" id="format">
         <div class="article-layout shell">
           <p class="section-index"><span>03</span> Discussant format</p>
-          <div class="article-body">
+          <div class="article-body" data-scroll>
             <h2>What is a discussant?</h2>
-            <p class="lead">A discussant is a non-author whose role is to help the audience understand and engage with an accepted paper. The model is common in the social sciences, but remains unfamiliar in machine learning.</p>
+            <p class="lead">A discussant is a non-author whose role is to help the audience understand and engage with an accepted paper. <em>The model is common in the social sciences, but remains unfamiliar in machine learning.</em></p>
             <div class="prose">
               <p>Traditionally, accepted conference papers are presented by their authors, while reviewers disappear into the background. For autonomous research, we propose that the allocation of attention be reversed. If autonomous systems can produce candidate papers at scale, the scarce human contribution becomes the ability to evaluate AI-generated claims.</p>
               <p>The discussant is not a co-author and does not replace the author. They bring an independent, informed perspective to the work: why its primary result deserves attention, which evidence is most persuasive, what limitations remain, and what the community should discuss next.</p>
             </div>
 
-            <div class="stages" aria-label="The four stages of the discussant process">
-              <article><span>01 · Review</span><h3>Blind decision-making</h3><p>Submissions remain blind and reviewers anonymous. Reviewers assess the work independently under the NeurIPS conflict-of-interest policy.</p></article>
-              <article><span>02 · Selection</span><h3>An accepting reviewer</h3><p>A discussant is chosen from reviewers who advocated acceptance—first from volunteers, otherwise by random selection.</p></article>
-              <article><span>03 · Preparation</span><h3>An independent reading</h3><p>The discussant prepares an account of the contribution, strongest evidence, unresolved limitations, and questions for the author.</p></article>
-              <article><span>04 · Workshop</span><h3>Summary, response, dialogue</h3><p>The author gives a brief summary. The discussant responds, opening a dialogue with the author and audience.</p></article>
-            </div>
+            <ol class="stages" aria-label="The four stages of the discussant process">
+              <li><span>01 · Review</span><h3>Blind decision-making</h3><p>Submissions remain blind and reviewers anonymous. Reviewers assess the work independently under the NeurIPS conflict-of-interest policy.</p></li>
+              <li><span>02 · Selection</span><h3>An accepting reviewer</h3><p>A discussant is chosen from reviewers who advocated acceptance&mdash;first from volunteers, otherwise by random selection.</p></li>
+              <li><span>03 · Preparation</span><h3>An independent reading</h3><p>The discussant prepares an account of the contribution, strongest evidence, unresolved limitations, and questions for the author.</p></li>
+              <li><span>04 · Workshop</span><h3>Summary, response, dialogue</h3><p>The author gives a brief summary. The discussant responds, opening a dialogue with the author and audience.</p></li>
+            </ol>
 
             <details class="expander">
               <summary>Full review and attribution policy</summary>
@@ -125,7 +159,7 @@
       <section class="page-section" id="practical">
         <div class="article-layout shell">
           <p class="section-index"><span>04</span> Practical information</p>
-          <div class="article-body">
+          <div class="article-body" data-scroll>
             <h2>Dates and program</h2>
             <div class="practical-grid">
               <div>
@@ -142,24 +176,24 @@
               </div>
               <div>
                 <h3>One day in Sydney</h3>
-                <p>Invited perspectives, author–discussant sessions, posters, and a closing town hall—designed to make human evaluation visible.</p>
-                <p><span class="pending">Workshop date pending</span></p>
+                <p>Invited perspectives, author&ndash;discussant sessions, posters, and a closing town hall&mdash;designed to make human evaluation visible.</p>
+                <p><span class="pending">Workshop date pending<span class="sr-only"> (status: to be announced)</span></span></p>
               </div>
             </div>
 
             <details class="expander">
               <summary>View the proposed schedule</summary>
               <div class="schedule">
-                <p><time>9:00–9:15</time><span>Opening: What counts as autonomous research?</span></p>
-                <p><time>9:15–9:50</time><span>Invited talk · Sherry Yang</span></p>
-                <p><time>9:50–10:25</time><span>Invited talk · Mengdi Wang</span></p>
-                <p><time>10:25–10:45</time><span>Break</span></p>
-                <p><time>10:45–11:20</time><span>Invited talk · Nik Dawson</span></p>
-                <p><time>11:20–12:00</time><span>Spotlight author–discussant sessions</span></p>
-                <p><time>12:00–1:15</time><span>Lunch and informal discussion</span></p>
-                <p><time>1:15–2:45</time><span>Spotlight author–discussant sessions</span></p>
-                <p><time>2:45–4:30</time><span>Poster session</span></p>
-                <p><time>4:30–5:15</time><span>Town hall</span></p>
+                <p><span class="time">9:00&ndash;9:15</span><span>Opening: What counts as autonomous research?</span></p>
+                <p><span class="time">9:15&ndash;9:50</span><span>Invited talk · Sherry Yang</span></p>
+                <p><span class="time">9:50&ndash;10:25</span><span>Invited talk · Mengdi Wang</span></p>
+                <p><span class="time">10:25&ndash;10:45</span><span>Break</span></p>
+                <p><span class="time">10:45&ndash;11:20</span><span>Invited talk · Nik Dawson</span></p>
+                <p><span class="time">11:20&ndash;12:00</span><span>Spotlight author&ndash;discussant sessions</span></p>
+                <p><span class="time">12:00&ndash;1:15</span><span>Lunch and informal discussion</span></p>
+                <p><span class="time">1:15&ndash;2:45</span><span>Spotlight author&ndash;discussant sessions</span></p>
+                <p><span class="time">2:45&ndash;4:30</span><span>Poster session</span></p>
+                <p><span class="time">4:30&ndash;5:15</span><span>Town hall</span></p>
               </div>
             </details>
           </div>
@@ -169,22 +203,22 @@
       <section class="page-section" id="people">
         <div class="article-layout shell">
           <p class="section-index"><span>05</span> People</p>
-          <div class="article-body">
+          <div class="article-body" data-scroll>
             <h2>Speakers and organizers</h2>
-            <div class="people-group">
+            <dl class="people-group">
               <h3>Invited speakers</h3>
-              <p><strong>Mengdi Wang</strong><span>Princeton University</span></p>
-              <p><strong>Sherry Yang</strong><span>NYU Courant · Google DeepMind</span></p>
-              <p><strong>Nik Dawson</strong><span>Burning Glass Institute</span></p>
-            </div>
+              <div><dt>Mengdi Wang</dt><dd>Princeton University</dd></div>
+              <div><dt>Sherry Yang</dt><dd>NYU Courant · Google DeepMind</dd></div>
+              <div><dt>Nik Dawson</dt><dd>Burning Glass Institute</dd></div>
+            </dl>
             <div class="people-columns">
               <div class="people-group compact">
                 <h3>Organizers</h3>
-                <p>Arjun Prakash · Aditya Iyer · Hamish Ivison · Jack Liell-Cock · Amy Greenwald · Nora Ayanian</p>
+                <p class="name-run"><span>Arjun Prakash</span><span>Aditya Iyer</span><span>Hamish Ivison</span><span>Jack Liell-Cock</span><span>Amy Greenwald</span><span>Nora Ayanian</span></p>
               </div>
               <div class="people-group compact">
                 <h3>Area chairs</h3>
-                <p>David Tao · Kevin Wang · Anna Hakhverdyan · Stephen Crawford · Zarif Aziz</p>
+                <p class="name-run"><span>David Tao</span><span>Kevin Wang</span><span>Anna Hakhverdyan</span><span>Stephen Crawford</span><span>Zarif Aziz</span></p>
               </div>
             </div>
           </div>
@@ -194,19 +228,41 @@
       <section class="submission" id="submit">
         <div class="article-layout shell">
           <p class="section-index">Submission</p>
-          <div class="article-body">
+          <div class="article-body" data-scroll>
             <h2>Prepare your work.</h2>
             <p class="lead">OpenReview, formatting, paper length, and final disclosure instructions are coming soon.</p>
-            <div class="submission-status"><span class="pending">Submission details pending</span><p>The submission link will appear here when the portal opens.</p></div>
+            <div class="submission-status"><span class="pending">Submission details pending<span class="sr-only"> (status: to be announced)</span></span><p>The submission link will appear here when the portal opens.</p></div>
             <details class="expander faq">
               <summary>Common questions</summary>
               <div class="faq-list">
-                <details><summary>What counts as autonomous ML research?</summary><p>ML research in which an autonomous agent either conducted the research end-to-end or made the decisive contribution to the paper’s primary result.</p></details>
+                <details><summary>What counts as autonomous ML research?</summary><p>ML research in which an autonomous agent either conducted the research end-to-end or made the decisive contribution to the paper&rsquo;s primary result.</p></details>
                 <details><summary>Can humans still be authors?</summary><p>Yes. Authorship remains exclusively human. Authors curate the work, verify its claims, disclose agent involvement, and remain responsible for the final submission.</p></details>
                 <details><summary>Can I submit a systems-only paper?</summary><p>No. The submission must contain a qualifying ML research result. The system that produced it should be documented in Part 2.</p></details>
-                <details><summary>Is the workshop archival?</summary><p>No. Authors may continue developing and submitting their work elsewhere, subject to those venues’ policies.</p></details>
+                <details><summary>Is the workshop archival?</summary><p>No. Authors may continue developing and submitting their work elsewhere, subject to those venues&rsquo; policies.</p></details>
               </div>
             </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="article-layout shell">
+          <p class="section-index">Contact</p>
+          <div class="article-body" data-scroll>
+            <p class="eyebrow">Get in touch</p>
+            <h2>Questions?</h2>
+            <p class="lead">Reach the organizers with questions about the workshop, submissions, or the discussant format.</p>
+            <a class="mailto-primary" href="mailto:arjun_prakash@brown.edu?cc=aditya_iyer@brown.edu&subject=A%2FML%20Workshop%20enquiry">Email the organizers <span aria-hidden="true">&#8594;</span></a>
+            <div class="mailto-list">
+              <div class="mailto-row">
+                <span class="mailto-name">Arjun Prakash</span>
+                <a href="mailto:arjun_prakash@brown.edu">arjun_prakash@brown.edu</a>
+              </div>
+              <div class="mailto-row">
+                <span class="mailto-name">Aditya Iyer</span>
+                <a href="mailto:aditya_iyer@brown.edu">aditya_iyer@brown.edu</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -215,9 +271,11 @@
     <footer class="site-footer">
       <div class="footer-main shell">
         <p>Make autonomous research visible.<br>Keep human judgment central.</p>
-        <div><a href="#call">Call for papers</a><a href="#format">Format</a><a href="#people">People</a></div>
+        <div><a href="#call">Call for papers</a><a href="#format">Format</a><a href="#people">People</a><a href="#contact">Contact</a></div>
       </div>
-      <div class="footer-meta shell"><span>Workshop for Autonomous Machine Learning Research · NeurIPS 2026</span><span class="pending">Contact email pending</span></div>
+      <div class="footer-meta shell"><span>Workshop for Autonomous Machine Learning Research · NeurIPS 2026</span></div>
     </footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

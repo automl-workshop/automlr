@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#F4F0E6"/>
+  <circle cx="16" cy="16" r="12" fill="none" stroke="#B4531F" stroke-width="1.5"/>
+  <text x="16" y="20.5" font-family="Georgia, 'Times New Roman', serif" font-size="9.5" fill="#211E1A" text-anchor="middle">A/ML</text>
+</svg>
