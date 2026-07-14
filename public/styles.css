@@ -271,24 +271,26 @@ a { color: inherit; text-decoration: none; }
   isolation: isolate;
 }
 
-/* Hero content sits above the lattice canvas. */
-.hero > :not(.hero-lattice) { position: relative; z-index: 1; }
+/* Hero content sits above the autonomous-research canvas. */
+.hero > :not(.hero-research) { position: relative; z-index: 1; }
 
-/* Animated neural-network lattice (drawn in main.js). Faded left so the
-   headline stays clean; concentrated in the empty right of the hero. */
-.hero-lattice {
+/* The self-researching paper occupies the hero's open right-hand field. Its
+   left edge fades beneath the headline so the editorial hierarchy stays clear. */
+.hero-research {
   position: absolute;
-  inset: -40px 0 -40px 0;
-  width: 100%;
-  height: calc(100% + 80px);
+  right: -52px;
+  top: -24px;
+  width: 64%;
+  height: calc(100% + 48px);
   z-index: 0;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 38%, #000 56%);
-  mask-image: linear-gradient(to right, transparent 0%, transparent 38%, #000 56%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.7) 15%, #000 28%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.7) 15%, #000 28%);
 }
-/* The lattice needs horizontal room; hide it on phones for a clean hero. */
+/* The full research composition needs horizontal room; phones retain the
+   distilled signal line below the hero copy. */
 @media (max-width: 720px) {
-  .hero-lattice { display: none; }
+  .hero-research { display: none; }
 }
 
 .hero h1 {
