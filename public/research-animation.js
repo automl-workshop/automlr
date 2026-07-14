@@ -316,8 +316,8 @@
     ctx.save();
     ctx.globalAlpha = overall;
 
-    Object.values(curves).forEach((curve, i) => {
-      drawBezier(ctx, curve, build * (1 - progress(time, 7.7, 9.15)), .12 + research * .2, i === 3);
+    Object.values(curves).forEach((curve) => {
+      drawBezier(ctx, curve, build * (1 - progress(time, 7.7, 9.15)), .12 + research * .2, true);
     });
     // The paper sends the first signals outward, then evidence travels back.
     if (research > .05) {
