@@ -1,15 +1,28 @@
-# Hello World
+# automlr.com
 
-A framework-free workshop site deployed on Vercel.
+Static one-page site for the **Workshop for Autonomous Machine Learning Research** (NeurIPS 2026, Sydney).
 
-Pushes to `main` automatically deploy the site to production via Vercel. There
-is no build step — `vercel.json` sets `outputDirectory` to `public/`, so Vercel
-serves those static assets as-is (with `cleanUrls` enabled). The production site
-is available at <https://automlr.com> (with `www.automlr.com` redirecting to the
-apex).
+No build step, no framework — just `public/index.html` + `public/styles.css`.
 
-Only files in `public/` are deployed as website assets. Proposal sources and
-other project files remain private to the repository or local workspace.
+## Deploy
 
-The old Cloudflare Worker (`wrangler.jsonc`) is retained dormant as a rollback
-fallback and is no longer attached to the domain.
+Manual, via the Vercel CLI from the repo root (no auto-deploy on push):
+
+```sh
+vercel          # preview URL to check first
+vercel --prod   # promote to production
+```
+
+- Live: <https://automlr.com> (`www` → apex)
+- Config: `vercel.json` (`outputDirectory: public`, `cleanUrls`)
+
+## Local preview
+
+```sh
+python3 -m http.server -d public 8000   # http://localhost:8000
+```
+
+## Notes
+
+- Only `public/` ships; everything else stays in the repo.
+- `wrangler.jsonc` is a dormant Cloudflare Worker kept as rollback, detached from the domain.
