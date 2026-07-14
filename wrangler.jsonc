@@ -1,4 +1,7 @@
 {
+  // Retained only as a rollback fallback. The site is now served by Vercel
+  // (see vercel.json); this Worker is kept dormant and is no longer attached
+  // to the automlr.com custom domain.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "automlr",
   "compatibility_date": "2026-07-13",
