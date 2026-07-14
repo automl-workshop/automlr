@@ -48,8 +48,8 @@ a { color: inherit; }
 .hero { min-height: 610px; padding-top: 116px; padding-bottom: 96px; }
 .hero .eyebrow { margin: 0 0 28px; }
 h1, h2, h3, blockquote, .hero-deck { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
-h1 { max-width: 900px; margin: 0; font-size: clamp(62px, 7.4vw, 88px); line-height: .96; letter-spacing: -.055em; }
-h1 em { color: var(--blue); font-style: normal; }
+h1 { max-width: 1040px; margin: 0; font-size: clamp(60px, 6.4vw, 76px); line-height: .98; letter-spacing: -.05em; }
+h1 em { color: var(--blue); font-style: normal; white-space: nowrap; }
 .hero-deck { margin: 36px 0 5px; font-size: 24px; line-height: 1.35; }
 .hero-summary { max-width: 650px; margin: 0; color: var(--muted); font-size: 18px; }
 .arrow-link { display: inline-block; margin-top: 34px; color: var(--blue); font-size: 15px; font-weight: 700; text-decoration: none; }
@@ -162,7 +162,7 @@ details[open] > summary::after { content: "−"; }
   .wordmark > span:last-child { display: none; }
   .nav-links a:not(.button-link) { display: none; }
   .hero { min-height: auto; padding-top: 72px; padding-bottom: 68px; }
-  h1 { font-size: clamp(54px, 16vw, 64px); }
+  h1 { font-size: clamp(50px, 14vw, 58px); }
   .hero-deck { margin-top: 30px; font-size: 22px; }
   .hero-summary { font-size: 17px; }
   .facts-grid { grid-template-columns: 1fr; }
