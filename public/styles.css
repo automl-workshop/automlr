@@ -17,6 +17,7 @@
   --accent:       #7FA1C1; /* steel-blue signal — rules, marks, spans, hero italic */
   --accent-deep:  #A9C5DE; /* brighter accent for link/label TEXT on dark */
   --accent-wash:  #151D25; /* dark cool panel (pending badge / inline margin-note) */
+  --accent-bright:#C6DCF0; /* reserved climax — ONE brighter beat (Pandora quote + mobile signal) */
   --footer-ink:   #060609; /* deepest band */
   --footer-paper: #DEDBD3;
   --footer-faint: #706E67;
@@ -315,6 +316,19 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.3;
   color: var(--ink-soft);
   margin: 0 0 18px;
+  position: relative;
+  padding-left: 22px;
+}
+/* Hanging accent rule: elevates the concept dyad into its own beat, and
+   introduces a small, deliberate asymmetry against the flush-left headline. */
+.hero-deck::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.28em;
+  bottom: 0.28em;
+  width: 2px;
+  background: var(--accent);
 }
 
 .hero-summary {
@@ -353,6 +367,51 @@ a { color: inherit; text-decoration: none; }
 .arrow-link:hover::after,
 .arrow-link:focus-visible::after { transform: scaleX(1); }
 .arrow-link:hover span { transform: translate(2px, 2px); }
+
+/* ---------- mobile hero signal ----------
+   The neural lattice needs horizontal room and is hidden < 720px, which left
+   the phone hero identity-less. This is its small-screen stand-in: a single
+   hairline with a bright signal pulse sweeping across it — the lattice's core
+   motif (a propagating pulse) distilled to one line. */
+.hero-signal { display: none; }
+@media (max-width: 720px) {
+  .hero-signal {
+    display: block;
+    position: relative;
+    height: 1px;
+    margin-top: 40px;
+    background: var(--line-strong);
+    overflow: hidden;
+  }
+  .hero-signal span {
+    position: absolute;
+    top: 50%;
+    left: -56px;
+    width: 56px;
+    height: 1px;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, transparent, var(--accent-bright));
+    animation: heroSweep 3.6s var(--ease) infinite;
+  }
+  .hero-signal span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    background: var(--accent-bright);
+    box-shadow: 0 0 8px 1px color-mix(in srgb, var(--accent-bright) 55%, transparent);
+  }
+}
+@keyframes heroSweep {
+  0%   { left: -56px; opacity: 0; }
+  14%  { opacity: 1; }
+  86%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
 
 /* =========================================================================
    FACTS STRIP
@@ -452,8 +511,20 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink);
   margin: 0 0 28px;
   padding-bottom: 22px;
-  border-bottom: 1px solid var(--line-strong);
   text-wrap: balance;
+  position: relative;
+}
+/* The heading underline is a hairline that wipes in from the left on reveal —
+   a ledger-native motion, distinct from the uniform fade-up of everything else. */
+.article-body h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--line-strong);
+  transform-origin: left;
 }
 
 .article-body h3 {
@@ -486,8 +557,13 @@ a { color: inherit; text-decoration: none; }
 blockquote {
   margin: 40px 0 0;
   padding: 26px 0;
-  border-top: 2px solid var(--accent);
+  border-top: 2px solid var(--accent-bright); /* the one place the accent spikes */
   border-bottom: 1px solid var(--accent);
+}
+/* The Pandora / Hope quote is the argument's emotional peak: let it step left
+   out of the reading measure into the index gutter on wide screens. */
+@media (min-width: 1080px) {
+  #about blockquote { margin-left: -104px; }
 }
 blockquote p {
   font-family: var(--serif-display);
@@ -1010,7 +1086,8 @@ blockquote p:last-child { margin-bottom: 0; }
    ========================================================================= */
 .contact { background: var(--surface); }
 .contact .eyebrow { margin-bottom: 16px; color: var(--accent-deep); }
-.contact h2 { border-bottom: none; padding-bottom: 0; margin-bottom: 20px; }
+.contact h2 { padding-bottom: 0; margin-bottom: 20px; }
+.contact h2::after { display: none; }
 .contact .lead { margin-bottom: 30px; }
 
 .mailto-primary {
@@ -1147,6 +1224,15 @@ blockquote p:last-child { margin-bottom: 0; }
   transition: opacity 0.62s var(--ease), transform 0.62s var(--ease);
 }
 
+/* Heading-rule wipe: collapsed while JS is live and the block is unrevealed,
+   then drawn in from the left once the section scrolls into view. Without JS
+   (no .js class) the rule stays at full width. */
+.js [data-scroll] h2::after { transform: scaleX(0); }
+.js [data-scroll].is-revealed h2::after {
+  transform: scaleX(1);
+  transition: transform 0.7s var(--ease) 0.12s;
+}
+
 /* =========================================================================
    RESPONSIVE
    ========================================================================= */
@@ -1260,4 +1346,7 @@ blockquote p:last-child { margin-bottom: 0; }
     opacity: 1 !important;
     transform: none !important;
   }
+  /* Show the heading rules at full width, no wipe, and drop the mobile signal. */
+  .js [data-scroll] h2::after { transform: scaleX(1) !important; }
+  .hero-signal span { animation: none !important; left: -56px; }
 }
