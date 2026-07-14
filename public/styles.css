@@ -1,25 +1,26 @@
 /* =========================================================================
    Workshop for Autonomous Machine Learning Research — NeurIPS 2026
-   A warm research ledger: ink on warm paper, ruled by hairlines,
-   one burnt-sienna signal. Fraunces / Newsreader / IBM Plex Mono.
+   A dark research lab: light type on near-black, ruled by faint hairlines,
+   a sparse dot-grid, one cool steel-blue signal. Tilde-inflected.
+   Fraunces / Newsreader / IBM Plex Mono.
    ========================================================================= */
 
 :root {
-  --paper:        #F4F0E6;
-  --surface:      #EFE9DB;
-  --ink:          #211E1A;
-  --ink-soft:     #3A352E;
-  --muted:        #6E675B;
-  --faint:        #6B6456; /* darkened from #938A79 for WCAG AA (>=4.5:1 on paper/surface) */
-  --line:         #D8D0BF;
-  --line-strong:  #B7AD98;
-  --accent:       #B4531F;
-  --accent-deep:  #8F3E14;
-  --accent-wash:  #EADFCB;
-  --footer-ink:   #211E1A;
-  --footer-paper: #ECE6D8;
-  --footer-faint: #938A79; /* lighter faint reserved for the dark footer band */
-  --footer-line:  #403A31;
+  --paper:        #0C0C0E; /* near-black canvas */
+  --surface:      #131316; /* faintly raised panels (facts / submission / contact) */
+  --ink:          #ECEAE3; /* near-white — headings + body emphasis */
+  --ink-soft:     #CBC8C0; /* leads, blockquotes, strong */
+  --muted:        #949089; /* secondary prose */
+  --faint:        #85837C; /* mono micro-labels / metadata (AA on near-black) */
+  --line:         #24252C; /* hairlines */
+  --line-strong:  #34353E; /* stronger hairlines */
+  --accent:       #7FA1C1; /* steel-blue signal — rules, marks, spans, hero italic */
+  --accent-deep:  #A9C5DE; /* brighter accent for link/label TEXT on dark */
+  --accent-wash:  #151D25; /* dark cool panel (pending badge / inline margin-note) */
+  --footer-ink:   #060609; /* deepest band */
+  --footer-paper: #DEDBD3;
+  --footer-faint: #706E67;
+  --footer-line:  #1F2027;
 
   --serif-display: "Fraunces", Georgia, "Times New Roman", serif;
   --serif-body:    "Newsreader", Georgia, "Times New Roman", serif;
@@ -60,16 +61,16 @@ main,
 .site-footer,
 .skip-link { position: relative; z-index: 1; }
 
-/* ---------- warm paper grain (behind all content) ---------- */
+/* ---------- sparse dot-grid (behind all content, tilde-inflected) ---------- */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.035;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: radial-gradient(circle, rgba(150,168,192,0.13) 1px, transparent 1.5px);
+  background-size: 44px 44px;
+  background-position: -1px -1px;
 }
 
 img { max-width: 100%; height: auto; }
