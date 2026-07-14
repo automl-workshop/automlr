@@ -140,6 +140,19 @@
               <p>The discussant is not a co-author and does not replace the author. They bring an independent, informed perspective to the work: why its primary result deserves attention, which evidence is most persuasive, what limitations remain, and what the community should discuss next.</p>
             </div>
 
+            <figure class="format-study">
+              <div class="format-study-frame">
+                <canvas id="discussant-study" role="img" aria-label="A human author puts a paper forward to three anonymous reviewers. One accepting reviewer becomes the discussant and illuminates the work. The paper remains central while dialogue streams connect the author, discussant, and audience."></canvas>
+              </div>
+              <figcaption class="format-study-caption">
+                <span>From blind review to public dialogue</span>
+                <span class="format-study-controls">
+                  <button type="button" data-action="toggle" aria-pressed="false">Pause</button>
+                  <button type="button" data-action="replay">Replay</button>
+                </span>
+              </figcaption>
+            </figure>
+
             <ol class="stages" aria-label="The four stages of the discussant process">
               <li><span>01 · Review</span><h3>Blind decision-making</h3><p>Submissions remain blind and reviewers anonymous. Reviewers assess the work independently under the NeurIPS conflict-of-interest policy.</p></li>
               <li><span>02 · Selection</span><h3>An accepting reviewer</h3><p>A discussant is chosen from reviewers who advocated acceptance&mdash;first from volunteers, otherwise by random selection.</p></li>
@@ -295,6 +308,7 @@
     </footer>
 
     <script src="/research-animation.js"></script>
+    <script src="/discussant-animation.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
