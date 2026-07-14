@@ -13,13 +13,13 @@
     <meta property="og:description" content="A discussant-led workshop rethinking how autonomous research enters the machine learning community.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://automlr.com">
-    <meta property="og:image" content="/og.png">
+    <meta property="og:image" content="https://automlr.com/og.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Workshop for Autonomous Machine Learning Research · NeurIPS 2026">
     <meta name="twitter:description" content="A discussant-led workshop rethinking how autonomous research enters the machine learning community.">
-    <meta name="twitter:image" content="/og.png">
+    <meta name="twitter:image" content="https://automlr.com/og.png">
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -49,6 +49,7 @@
 
     <main id="top">
       <section class="hero shell">
+        <canvas class="hero-lattice" aria-hidden="true"></canvas>
         <p class="eyebrow" data-reveal>NeurIPS 2026 · Sydney</p>
         <h1 data-reveal>Workshop for Autonomous <em>Machine Learning</em> Research</h1>
         <p class="hero-deck" data-reveal>Autonomous research, human judgment.</p>
@@ -205,21 +206,37 @@
           <p class="section-index"><span>05</span> People</p>
           <div class="article-body" data-scroll>
             <h2>Speakers and organizers</h2>
-            <dl class="people-group">
-              <h3>Invited speakers</h3>
-              <div><dt>Mengdi Wang</dt><dd>Princeton University</dd></div>
-              <div><dt>Sherry Yang</dt><dd>NYU Courant · Google DeepMind</dd></div>
-              <div><dt>Nik Dawson</dt><dd>Burning Glass Institute</dd></div>
-            </dl>
-            <div class="people-columns">
-              <div class="people-group compact">
-                <h3>Organizers</h3>
-                <p class="name-run"><span>Arjun Prakash</span><span>Aditya Iyer</span><span>Hamish Ivison</span><span>Jack Liell-Cock</span><span>Amy Greenwald</span><span>Nora Ayanian</span></p>
-              </div>
-              <div class="people-group compact">
-                <h3>Area chairs</h3>
-                <p class="name-run"><span>David Tao</span><span>Kevin Wang</span><span>Anna Hakhverdyan</span><span>Stephen Crawford</span><span>Zarif Aziz</span></p>
-              </div>
+
+            <div class="people-block">
+              <h3 class="people-label">Invited speakers</h3>
+              <ul class="people-grid">
+                <li class="person"><span class="avatar" data-initials="MW" data-photo="/people/mengdi-wang.jpg" role="img" aria-label="Mengdi Wang"></span><span class="person-name">Mengdi Wang</span><span class="person-aff">Princeton University</span></li>
+                <li class="person"><span class="avatar" data-initials="SY" data-photo="/people/sherry-yang.jpg" role="img" aria-label="Sherry Yang"></span><span class="person-name">Sherry Yang</span><span class="person-aff">NYU Courant · Google DeepMind</span></li>
+                <li class="person"><span class="avatar" data-initials="ND" data-photo="/people/nik-dawson.jpg" role="img" aria-label="Nik Dawson"></span><span class="person-name">Nik Dawson</span><span class="person-aff">Burning Glass Institute</span></li>
+              </ul>
+            </div>
+
+            <div class="people-block">
+              <h3 class="people-label">Organizers</h3>
+              <ul class="people-grid">
+                <li class="person"><span class="avatar" data-initials="AP" data-photo="/people/arjun-prakash.jpg" role="img" aria-label="Arjun Prakash"></span><span class="person-name">Arjun Prakash</span></li>
+                <li class="person"><span class="avatar" data-initials="AI" data-photo="/people/aditya-iyer.jpg" role="img" aria-label="Aditya Iyer"></span><span class="person-name">Aditya Iyer</span></li>
+                <li class="person"><span class="avatar" data-initials="HI" data-photo="/people/hamish-ivison.jpg" role="img" aria-label="Hamish Ivison"></span><span class="person-name">Hamish Ivison</span></li>
+                <li class="person"><span class="avatar" data-initials="JL" data-photo="/people/jack-liell-cock.jpg" role="img" aria-label="Jack Liell-Cock"></span><span class="person-name">Jack Liell-Cock</span></li>
+                <li class="person"><span class="avatar" data-initials="AG" data-photo="/people/amy-greenwald.jpg" role="img" aria-label="Amy Greenwald"></span><span class="person-name">Amy Greenwald</span></li>
+                <li class="person"><span class="avatar" data-initials="NA" data-photo="/people/nora-ayanian.jpg" role="img" aria-label="Nora Ayanian"></span><span class="person-name">Nora Ayanian</span></li>
+              </ul>
+            </div>
+
+            <div class="people-block">
+              <h3 class="people-label">Area chairs</h3>
+              <ul class="people-grid">
+                <li class="person"><span class="avatar" data-initials="DT" data-photo="/people/david-tao.jpg" role="img" aria-label="David Tao"></span><span class="person-name">David Tao</span></li>
+                <li class="person"><span class="avatar" data-initials="KW" data-photo="/people/kevin-wang.jpg" role="img" aria-label="Kevin Wang"></span><span class="person-name">Kevin Wang</span></li>
+                <li class="person"><span class="avatar" data-initials="AH" data-photo="/people/anna-hakhverdyan.jpg" role="img" aria-label="Anna Hakhverdyan"></span><span class="person-name">Anna Hakhverdyan</span></li>
+                <li class="person"><span class="avatar" data-initials="SC" data-photo="/people/stephen-crawford.jpg" role="img" aria-label="Stephen Crawford"></span><span class="person-name">Stephen Crawford</span></li>
+                <li class="person"><span class="avatar" data-initials="ZA" data-photo="/people/zarif-aziz.jpg" role="img" aria-label="Zarif Aziz"></span><span class="person-name">Zarif Aziz</span></li>
+              </ul>
             </div>
           </div>
         </div>
