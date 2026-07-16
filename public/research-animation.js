@@ -2,11 +2,27 @@
   "use strict";
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const STEEL = [127, 161, 193];
-  const BRIGHT = [198, 220, 240];
-  const INK = [236, 234, 227];
-  const SURFACE = [19, 19, 22];
+  let STEEL = [127, 161, 193];
+  let BRIGHT = [198, 220, 240];
+  let INK = [236, 234, 227];
+  let SURFACE = [19, 19, 22];
   const DURATION = 14;
+
+  function cssColor(name, fallback) {
+    const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    const hex = value.match(/^#([\da-f]{6})$/i)?.[1];
+    return hex ? [0, 2, 4].map((index) => Number.parseInt(hex.slice(index, index + 2), 16)) : fallback;
+  }
+
+  function syncTheme() {
+    STEEL = cssColor("--accent", STEEL);
+    BRIGHT = cssColor("--accent-bright", BRIGHT);
+    INK = cssColor("--ink", INK);
+    SURFACE = cssColor("--surface", SURFACE);
+  }
+
+  syncTheme();
+  window.addEventListener("automlr:themechange", syncTheme);
 
   const timeParam = new URLSearchParams(location.search).get("t");
   const frozenTime = timeParam !== null && Number.isFinite(Number(timeParam))

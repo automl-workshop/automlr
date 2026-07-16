@@ -1,0 +1,13 @@
+{
+  "name": "automlr-workshop-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "edit": "node tools/copy-editor.mjs",
+    "colors": "node tools/color-lab.mjs",
+    "fonts": "node tools/font-lab.mjs"
+  },
+  "devDependencies": {
+    "parse5": "^8.0.0"
+  }
+}

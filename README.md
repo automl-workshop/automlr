@@ -22,6 +22,29 @@ vercel --prod   # promote to production
 python3 -m http.server -d public 8000   # http://localhost:8000
 ```
 
+## Visual copy editor
+
+Edit the website copy directly on the rendered page:
+
+```sh
+npm install
+npm run edit                         # http://localhost:4174
+```
+
+Outlined text is editable. The **Save to index.html** button (or <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>S</kbd>) writes only changed copy back to `public/index.html`. This editor is local tooling and is not included in the deployed `public/` directory.
+
+Compare colour palettes on the real page without changing site files:
+
+```sh
+npm run colors                       # http://localhost:4175
+```
+
+Compare complete type systems without changing site files:
+
+```sh
+npm run fonts                        # http://localhost:4176
+```
+
 ## Notes
 
 - Only `public/` ships; everything else stays in the repo.
