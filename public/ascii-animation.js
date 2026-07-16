@@ -5,7 +5,7 @@ const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const colors = { ink: "#181a1f", soft: "#4f535b", faint: "#858882", accent: "#243bb9", signal: "#1f706b" };
 const modes = {
-  engine: { title: "Research crystallization", copy: "The research loop produces fragments of evidence that gather, align, and materialize as a paper.", code: "Research loop → evidence<br>→ claim → manuscript" },
+  engine: { title: "Research crystallization", copy: "Fragments of evidence gather, align, and materialize as a paper.", code: "Evidence → claim → manuscript" },
   discussant: { title: "Discussant dialogue", copy: "An author puts forward a paper. Review identifies a discussant; the audience arrives and evaluation becomes shared dialogue.", code: "Blind review → illumination<br>→ public dialogue" },
 };
 
@@ -166,12 +166,6 @@ function paper(x, y, w, h, progress = 1, alpha = 1, options = {}) {
   }
 }
 
-function station(x, y, symbol, name, active) {
-  const ring = active > .5 ? ["(", symbol, ")"] : ["·", symbol, "·"];
-  glyph(ring.join(" "), x, y, active > .5 ? colors.accent : colors.soft, .55 + active * .45);
-  label(name, x, y + cell * 1.7, active > .5 ? colors.ink : colors.soft, .6 + active * .4);
-}
-
 function person(symbol, x, y, color, alpha = 1, scale = 1) {
   ctx.save();
   ctx.font = `500 ${cell * 1.08 * scale}px "IBM Plex Mono", monospace`;
@@ -236,7 +230,7 @@ function drawAsciiIteration(x, y, alpha, t) {
 }
 
 function drawEngine(t) {
-  const cx = width * .55;
+  const cx = width * .5;
   const cy = height * .44;
   const cycle = (t * .065) % 1;
   const fadeIn = clamp((cycle - .015) / .055, 0, 1);
@@ -246,22 +240,6 @@ function drawEngine(t) {
   const ph = pw * 1.34;
   const rx = Math.min(width * .3, 280);
   const ry = Math.min(height * .29, 190);
-  const stations = [
-    [cx, cy - ry, "?", "hypothesis"], [cx + rx, cy, "{ }", "experiment"],
-    [cx, cy + ry, "∴", "evidence"], [cx - rx, cy, "Δ", "revise"],
-  ];
-  const loopProgress = (t * .09) % 1;
-  for (let i = 0; i < stations.length; i += 1) {
-    const a = stations[i];
-    const stationProgress = i / stations.length;
-    const rawDistance = Math.abs(loopProgress - stationProgress);
-    const distance = Math.min(rawDistance, 1 - rawDistance);
-    const proximity = 1 - clamp(distance / .085, 0, 1);
-    const active = proximity * proximity * (3 - 2 * proximity);
-    station(...a, active);
-  }
-  particlePath(stations.map((s) => [s[0], s[1]]).concat([[stations[0][0], stations[0][1]]]), loopProgress, "◆", colors.accent, 7);
-
   const fade = 1 - clamp((cycle - .92) / .08, 0, 1);
   const particles = Math.floor(82 * density);
   for (let i = 0; i < particles; i += 1) {
@@ -356,13 +334,13 @@ function drawDesk(t) {
 }
 
 function drawDiscussant(t) {
-  const duration = 26;
+  const duration = 27.1;
   const time = t % duration;
   const progress = (start, end) => {
     const n = clamp((time - start) / (end - start), 0, 1);
     return n * n * (3 - 2 * n);
   };
-  sceneAlpha = progress(.22, .95) * (1 - progress(25.25, 25.8));
+  sceneAlpha = progress(.22, .95) * (1 - progress(26.35, 26.9));
   const cx = width * .5;
   const cy = height * .36;
   const authorBase = { x: width * .08, y: cy };
@@ -377,7 +355,7 @@ function drawDiscussant(t) {
   const selected = progress(7.1, 9.3);
   const conversation = progress(9.8, 11.45);
   const audienceReveal = progress(10.7, 11.8);
-  const openFloor = progress(19.6, 20.45);
+  const openFloor = progress(20.7, 21.55);
   const paperY = cy - conversation * height * .19;
   const paperScale = 1 - conversation * .25;
   const basePaperWidth = Math.min(136, width * .18);
@@ -399,7 +377,7 @@ function drawDiscussant(t) {
   };
   const phases = {
     author: {
-      label: "01 / AUTHOR SUMMARY", start: 11.4, interval: 1.08,
+      label: "01 / AUTHOR SUMMARY", start: 12.5, interval: 1.08,
       lines: [
         { speaker: "AUTH", tag: "AUTHOR", text: "We gave the agent a harness, tools, and a fixed compute budget." },
         { speaker: "AUTH", tag: "", text: "It proposed hypotheses, modified code, and evaluated each run." },
@@ -408,7 +386,7 @@ function drawDiscussant(t) {
       ],
     },
     discussant: {
-      label: "02 / DISCUSSANT REPLY", start: 16.7, interval: .98,
+      label: "02 / DISCUSSANT REPLY", start: 17.8, interval: .98,
       lines: [
         { speaker: "DISC", tag: "DISCUSSANT", text: "The research result and system design must be read together." },
         { speaker: "DISC", tag: "", text: "The strongest evidence is the sequence of failed and successful runs." },
@@ -416,7 +394,7 @@ function drawDiscussant(t) {
       ],
     },
     open: {
-      label: "03 / OPEN FLOOR", start: 20.05, interval: .88,
+      label: "03 / OPEN FLOOR", start: 21.15, interval: .88,
       lines: [
         { speaker: "AUD", tag: "AUD 03", text: "Which decisions were genuinely autonomous?", audience: 2 },
         { speaker: "AUTH", tag: "AUTHOR", text: "The trace separates agent choices from human interventions." },
@@ -433,6 +411,7 @@ function drawDiscussant(t) {
   timeline.forEach((line, index) => { if (time >= line.start) currentUtterance = index; });
   const activeLine = currentUtterance >= 0 ? timeline[currentUtterance] : null;
   const activeSpeaker = activeLine?.speaker || "";
+  const transcriptReveal = progress(phases.author.start - .7, phases.author.start + .3);
 
   wordBadge("AUTHOR", author.x, author.y, colors.signal, .95, 1, activeSpeaker === "AUTH");
 
@@ -496,16 +475,16 @@ function drawDiscussant(t) {
   }
   if (audienceReveal > .05) label(openFloor > .5 ? "audience / open floor" : "audience", cx, audienceY + cell * 4.5, colors.soft, audienceReveal * .85);
 
-  if (time >= phases.author.start) {
+  if (transcriptReveal > 0) {
     const transcriptWidth = Math.min(width * .84, 660);
     const transcriptLeft = cx - transcriptWidth / 2;
-    const transcriptTop = height * .445;
+    const transcriptTop = speakerTargetY + cell * 3.25;
     ctx.save();
     ctx.font = `500 ${cell * .72}px "IBM Plex Mono", monospace`;
     const charWidth = ctx.measureText("M").width;
     const ruleChars = Math.max(8, Math.floor(transcriptWidth / charWidth));
-    label(phase.label, transcriptLeft, transcriptTop - cell * 1.4, phase === phases.author ? colors.signal : phase === phases.discussant ? colors.accent : colors.soft, .9, "left");
-    glyph("·".repeat(ruleChars), transcriptLeft, transcriptTop - cell * .55, colors.faint, .7, "left");
+    label(phase.label, transcriptLeft, transcriptTop - cell * 1.4, phase === phases.author ? colors.signal : phase === phases.discussant ? colors.accent : colors.soft, .9 * transcriptReveal, "left");
+    glyph("·".repeat(ruleChars), transcriptLeft, transcriptTop - cell * .55, colors.faint, .7 * transcriptReveal, "left");
     if (currentUtterance >= 0) {
       const visibleRows = 4;
       const lineGap = cell * 1.55;
@@ -518,13 +497,14 @@ function drawDiscussant(t) {
         const row = index - scroll;
         if (row < -1.05 || row > visibleRows + .05) continue;
         const local = clamp((time - utterance.start) / .68, 0, 1);
+        const lineFade = local * local * (3 - 2 * local);
         const prefix = utterance.tag ? `[${utterance.tag}]` : "";
         const prefixColumn = ctx.measureText("[DISCUSSANT]  ").width;
         const maxTextChars = Math.max(8, Math.floor((transcriptWidth - prefixColumn) / charWidth));
         const text = utterance.text.slice(0, Math.ceil(Math.min(maxTextChars, utterance.text.length) * local));
         const y = transcriptTop + row * lineGap;
         const edgeFade = clamp(row + 1, 0, 1) * clamp(visibleRows + .1 - row, 0, 1);
-        const lineAlpha = edgeFade * (index === currentUtterance ? 1 : .68);
+        const lineAlpha = edgeFade * (index === currentUtterance ? 1 : .68) * transcriptReveal * lineFade;
         if (prefix) glyph(prefix, transcriptLeft, y, utterance.speaker === "AUTH" ? colors.signal : utterance.speaker === "DISC" ? colors.accent : colors.ink, lineAlpha, "left");
         glyph(text, transcriptLeft + prefixColumn, y, colors.ink, lineAlpha, "left");
       }
@@ -561,7 +541,7 @@ class SiteAnimation {
     this.canvas = element;
     this.ctx = element.getContext("2d");
     this.mode = animationMode;
-    this.elapsed = reduceMotion ? (animationMode === "engine" ? 10.6 : 25.15) * 1000 : 0;
+    this.elapsed = reduceMotion ? (animationMode === "engine" ? 10.6 : 26.2) * 1000 : 0;
     this.last = performance.now();
     this.paused = reduceMotion;
     this.visible = true;
