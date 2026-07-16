@@ -45,6 +45,12 @@ Compare complete type systems without changing site files:
 npm run fonts                        # http://localhost:4176
 ```
 
+Explore animated ASCII concepts without changing site files:
+
+```sh
+npm run ascii                        # http://localhost:4177
+```
+
 ## Notes
 
 - Only `public/` ships; everything else stays in the repo.

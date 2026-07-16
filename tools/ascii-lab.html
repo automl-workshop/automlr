@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A/ML ASCII laboratory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:opsz,wght@6..72,400..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <style>
+      :root {
+        --paper: #f5f4ee; --surface: #ecebe4; --ink: #181a1f; --soft: #63676e;
+        --line: #d6d5cd; --accent: #3049d0; --wash: #e3e6f7; --signal: #287f79;
+        --mono: "IBM Plex Mono", ui-monospace, monospace;
+        --serif: "Newsreader", Georgia, serif;
+        --display: "Fraunces", Georgia, serif;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; color: var(--ink); background: var(--paper); font-family: var(--serif); }
+      button, input { font: inherit; }
+      button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+      .lab-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 64px; padding: 12px 24px; border-bottom: 1px solid var(--line); }
+      .brand { display: flex; align-items: center; gap: 12px; font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+      .mark { display: grid; place-items: center; width: 36px; aspect-ratio: 1; color: var(--accent); border: 1px solid var(--accent); border-radius: 50%; font: 400 12px/1 var(--display); }
+      .lab-note { color: var(--soft); font: 10px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+      main { display: grid; grid-template-columns: minmax(240px, 310px) 1fr; min-height: calc(100vh - 64px); }
+      aside { display: flex; flex-direction: column; padding: 30px 24px 22px; border-right: 1px solid var(--line); }
+      .eyebrow { margin: 0 0 14px; color: var(--accent); font: 500 10px/1 var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+      h1 { margin: 0; max-width: 8ch; font: 400 42px/.92 var(--display); letter-spacing: -.035em; }
+      .intro { margin: 18px 0 28px; color: var(--soft); font-size: 16px; line-height: 1.45; }
+      .concepts { display: grid; gap: 0; border-top: 1px solid var(--line); }
+      .concept { position: relative; width: 100%; padding: 15px 2px 14px 38px; color: var(--soft); background: transparent; border: 0; border-bottom: 1px solid var(--line); text-align: left; cursor: pointer; }
+      .concept::before { content: attr(data-index); position: absolute; left: 2px; top: 17px; color: var(--soft); font: 10px/1 var(--mono); }
+      .concept strong { display: block; color: var(--ink); font: 500 12px/1.3 var(--mono); letter-spacing: .02em; text-transform: uppercase; }
+      .concept span { display: block; margin-top: 5px; font: 14px/1.25 var(--serif); }
+      .concept[aria-pressed="true"]::before, .concept[aria-pressed="true"] strong { color: var(--accent); }
+      .controls { display: grid; gap: 14px; margin-top: auto; padding-top: 30px; }
+      .control { display: grid; grid-template-columns: 62px 1fr 30px; align-items: center; gap: 8px; color: var(--soft); font: 10px/1 var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+      .control output { color: var(--ink); text-align: right; }
+      input[type="range"] { appearance: none; height: 1px; background: var(--line); }
+      input[type="range"]::-webkit-slider-thumb { appearance: none; width: 9px; height: 9px; border: 0; border-radius: 50%; background: var(--accent); cursor: pointer; }
+      .actions { display: flex; gap: 8px; margin-top: 4px; }
+      .actions button { flex: 1; padding: 9px; color: var(--ink); background: transparent; border: 1px solid var(--line); cursor: pointer; font: 10px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; }
+      .actions button:hover { color: var(--accent); border-color: var(--accent); }
+      .stage-wrap { position: relative; min-width: 0; min-height: 640px; overflow: hidden; background-image: radial-gradient(circle, rgba(48,73,208,.09) 1px, transparent 1.4px); background-size: 44px 44px; }
+      .stage-wrap::after { content: "ASCII / LIVE SYSTEM"; position: absolute; top: 20px; right: 24px; color: var(--soft); font: 9px/1 var(--mono); letter-spacing: .12em; writing-mode: vertical-rl; }
+      canvas { display: block; width: 100%; height: 100%; min-height: 640px; }
+      .caption { position: absolute; left: 28px; right: 28px; bottom: 24px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; pointer-events: none; }
+      .caption h2 { margin: 0 0 5px; font: 400 28px/1 var(--display); }
+      .caption p { margin: 0; max-width: 510px; color: var(--soft); font-size: 15px; line-height: 1.35; }
+      .caption-code { color: var(--accent); font: 10px/1.4 var(--mono); letter-spacing: .08em; text-align: right; text-transform: uppercase; }
+      @media (max-width: 800px) {
+        main { grid-template-columns: 1fr; }
+        aside { border-right: 0; border-bottom: 1px solid var(--line); }
+        h1 { max-width: none; font-size: 36px; }
+        .intro { max-width: 600px; }
+        .controls { margin-top: 24px; }
+        .stage-wrap, canvas { min-height: 560px; }
+      }
+      @media (prefers-reduced-motion: reduce) { .lab-note::after { content: " · reduced motion"; } }
+    </style>
+    <script type="module" src="/ascii-lab-client.js"></script>
+  </head>
+  <body>
+    <header class="lab-header">
+      <div class="brand"><span class="mark">A/ML</span><span>ASCII laboratory</span></div>
+      <span class="lab-note">Local study · nothing here is published</span>
+    </header>
+    <main>
+      <aside>
+        <p class="eyebrow">Final studies / 01 + 04</p>
+        <h1>Research, in characters.</h1>
+        <p class="intro">Two finalists for making autonomous research visible—not as a chatbot, but as a process that keeps moving when nobody is typing.</p>
+        <nav class="concepts" aria-label="ASCII studies">
+          <button class="concept" data-mode="engine" data-index="01" aria-pressed="true"><strong>Research crystallization</strong><span>A loop materializes its own paper.</span></button>
+          <button class="concept" data-mode="discussant" data-index="04" aria-pressed="false"><strong>Discussant dialogue</strong><span>Review becomes public conversation.</span></button>
+        </nav>
+        <div class="controls">
+          <label class="control"><span>Cell</span><input data-control="cell" type="range" min="10" max="20" value="20"><output>20</output></label>
+          <label class="control"><span>Speed</span><input data-control="speed" type="range" min="30" max="160" value="100"><output>1.0×</output></label>
+          <label class="control"><span>Density</span><input data-control="density" type="range" min="35" max="100" value="100"><output>100%</output></label>
+          <div class="actions"><button type="button" data-action="pause">Pause</button><button type="button" data-action="remix">Remix</button></div>
+        </div>
+      </aside>
+      <section class="stage-wrap" aria-label="Animated ASCII study">
+        <canvas id="ascii-stage"></canvas>
+        <div class="caption" aria-live="polite">
+          <div><h2 id="caption-title">Research crystallization</h2><p id="caption-copy">The research loop produces fragments of evidence that gather, align, and materialize as a paper.</p></div>
+          <span class="caption-code" id="caption-code">Research loop → evidence<br>→ claim → manuscript</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
