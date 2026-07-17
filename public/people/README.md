@@ -15,15 +15,13 @@ Invited speakers
 - `sherry-yang.jpg`
 - `nik-dawson.jpg`
 
-Organizers
+Organizing committee
 - `arjun-prakash.jpg`
 - `aditya-iyer.jpg`
 - `hamish-ivison.jpg`
 - `jack-liell-cock.jpg`
 - `amy-greenwald.jpg`
 - `nora-ayanian.jpg`
-
-Area chairs
 - `david-tao.jpg`
 - `kevin-wang.jpg`
 - `anna-hakhverdyan.jpg`
