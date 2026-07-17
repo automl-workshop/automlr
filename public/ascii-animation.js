@@ -133,6 +133,14 @@ function paper(x, y, w, h, progress = 1, alpha = 1, options = {}) {
       const visible = text.slice(0, Math.ceil(text.length * reveal));
       glyph(visible, contentLeft, top + h * yPosition, color, alpha * (.75 + reveal * .25) * weight, "left");
     };
+    const revealGridRow = (text, row, yPosition, color = colors.soft) => {
+      const reveal = clamp(progress * 17 - row, 0, 1);
+      if (!reveal) return;
+      const visibleChars = Math.ceil(text.length * reveal);
+      for (let column = 0; column < visibleChars; column += 1) {
+        glyph(text[column], contentLeft + charWidth * (column + .5), top + h * yPosition, color, alpha * (.75 + reveal * .25));
+      }
+    };
     revealRow(short(.92, "━"), 0, .105, colors.ink);
     revealRow(short(.64, "━"), 1, .152, colors.ink);
     revealRow("• · • · •", 2, .205, colors.accent, .9);
@@ -143,7 +151,7 @@ function paper(x, y, w, h, progress = 1, alpha = 1, options = {}) {
       `┌${"─".repeat(figureInside)}┐`,
       ...bestLossRows.map(figureRow),
       `└${"─".repeat(figureInside)}┘`,
-    ].forEach((line, index) => revealRow(line, 6 + index, .405 + index * .052, index === 0 || index === 5 ? colors.soft : colors.accent));
+    ].forEach((line, index) => revealGridRow(line, 6 + index, .405 + index * .052, index === 0 || index === 5 ? colors.soft : colors.accent));
     revealRow(short(.46, "·"), 12, .735, colors.faint);
     revealRow(short(.95), 13, .795);
     revealRow(short(.78), 14, .84);
