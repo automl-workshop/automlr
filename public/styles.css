@@ -295,10 +295,18 @@ a { color: inherit; text-decoration: none; }
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.7) 15%, #000 28%);
   mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.7) 15%, #000 28%);
 }
-/* The full research composition needs horizontal room; phones retain the
-   distilled signal line below the hero copy. */
+/* On phones the research study becomes a compact editorial plate beneath the
+   hero copy instead of competing with it as a background layer. */
 @media (max-width: 720px) {
-  .hero-research { display: none; }
+  .hero-research {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 300px;
+    margin: 28px 0 -44px;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
 }
 
 .hero h1 {
@@ -377,51 +385,6 @@ a { color: inherit; text-decoration: none; }
 .arrow-link:hover::after,
 .arrow-link:focus-visible::after { transform: scaleX(1); }
 .arrow-link:hover span { transform: translate(2px, 2px); }
-
-/* ---------- mobile hero signal ----------
-   The neural lattice needs horizontal room and is hidden < 720px, which left
-   the phone hero identity-less. This is its small-screen stand-in: a single
-   hairline with a bright signal pulse sweeping across it — the lattice's core
-   motif (a propagating pulse) distilled to one line. */
-.hero-signal { display: none; }
-@media (max-width: 720px) {
-  .hero-signal {
-    display: block;
-    position: relative;
-    height: 1px;
-    margin-top: 40px;
-    background: var(--line-strong);
-    overflow: hidden;
-  }
-  .hero-signal span {
-    position: absolute;
-    top: 50%;
-    left: -56px;
-    width: 56px;
-    height: 1px;
-    transform: translateY(-50%);
-    background: linear-gradient(to right, transparent, var(--accent-bright));
-    animation: heroSweep 3.6s var(--ease) infinite;
-  }
-  .hero-signal span::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    transform: translate(50%, -50%);
-    background: var(--accent-bright);
-    box-shadow: 0 0 8px 1px color-mix(in srgb, var(--accent-bright) 55%, transparent);
-  }
-}
-@keyframes heroSweep {
-  0%   { left: -56px; opacity: 0; }
-  14%  { opacity: 1; }
-  86%  { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
-}
 
 /* =========================================================================
    FACTS STRIP
@@ -1460,7 +1423,6 @@ blockquote p:last-child { margin-bottom: 0; }
     opacity: 1 !important;
     transform: none !important;
   }
-  /* Show the heading rules at full width, no wipe, and drop the mobile signal. */
+  /* Show the heading rules at full width with no wipe. */
   .js [data-scroll] h2::after { transform: scaleX(1) !important; }
-  .hero-signal span { animation: none !important; left: -56px; }
 }

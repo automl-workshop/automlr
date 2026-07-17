@@ -236,7 +236,7 @@ function drawEngine(t) {
   const fadeIn = clamp((cycle - .015) / .055, 0, 1);
   const fadeOut = 1 - clamp((cycle - .9) / .07, 0, 1);
   sceneAlpha = fadeIn * fadeIn * (3 - 2 * fadeIn) * fadeOut * fadeOut * (3 - 2 * fadeOut);
-  const pw = Math.min(168, width * .23);
+  const pw = Math.min(168, width * (width < 520 ? .42 : .23));
   const ph = pw * 1.34;
   const rx = Math.min(width * .3, 280);
   const ry = Math.min(height * .29, 190);
@@ -560,7 +560,7 @@ class SiteAnimation {
     ctx = this.ctx;
     width = this.width;
     height = this.height;
-    cell = this.mode === "engine" ? 20 : clamp(this.width / 48, 10, 15);
+    cell = this.mode === "engine" ? (this.width < 520 ? 14 : 20) : clamp(this.width / 48, 10, 15);
     density = 1;
     speed = 1;
     seed = this.seed;
