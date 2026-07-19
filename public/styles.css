@@ -676,6 +676,13 @@ blockquote p:last-child { margin-bottom: 0; }
   margin: 0 0 1.2em;
 }
 .disclosure p strong { color: var(--ink-soft); font-weight: 500; }
+.disclosure a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .16em;
+}
+.disclosure a:hover { color: var(--accent); }
 .disclosure-note {
   font-style: italic;
   color: var(--muted);
