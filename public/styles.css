@@ -565,7 +565,13 @@ blockquote p:last-child { margin-bottom: 0; }
 .paper-intro { margin-top: 44px; }
 .paper-intro h3 { margin-bottom: 10px; }
 .paper-intro p { color: var(--muted); margin: 0; line-height: 1.6; }
-.paper-intro strong { color: var(--ink-soft); font-weight: 550; }
+.paper-intro a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+.paper-intro a:hover { color: var(--accent); }
 
 .paper-parts {
   margin: 26px 0 40px;
