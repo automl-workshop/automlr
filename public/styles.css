@@ -41,9 +41,6 @@
   --shell: min(100% - 48px, 1120px);
   --measure: 720px;
 
-  /* in-measure definition-note geometry */
-  --mn-gutter:  40px;
-  --mn-margin:  220px;
 }
 
 /* ---------- reset ---------- */
@@ -356,6 +353,13 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 34px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+}
+
 .arrow-link {
   display: inline-flex;
   align-items: center;
@@ -547,78 +551,21 @@ blockquote p {
 blockquote p:last-child { margin-bottom: 0; }
 
 /* =========================================================================
-   MARGIN NOTES (distill move)
-   ========================================================================= */
-.article-body.has-margin { position: relative; }
-
-.definition {
-  margin: 0 0 30px;
-}
-.definition h3 {
-  font-family: var(--mono);
-  font-weight: 500;
-  font-size: var(--type-label);
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--accent-deep);
-  margin: 0 0 10px;
-}
-.definition p {
-  margin: 0;
-  color: var(--muted);
-}
-
-/* mobile / narrow: inline left-ruled aside */
-.margin-note {
-  background: var(--accent-wash);
-  border-left: 3px solid var(--accent);
-  padding: 18px 20px;
-}
-.margin-note p { font-size: var(--type-small); line-height: 1.55; }
-
-/* Wide: place the definition beside its reference paragraph, but keep the
-   entire construction inside the shared reading measure. This preserves the
-   same left and right axes as every other section. */
-@media (min-width: 1080px) {
-  .article-body.has-margin {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) var(--mn-gutter) var(--mn-margin);
-    column-gap: 0;
-    align-items: start;
-  }
-  /* Normal content retains the full shared measure. */
-  .article-body.has-margin > *:not(.margin-note) {
-    grid-column: 1 / -1;
-  }
-  /* The lead and definition share one row; subsequent content returns to the
-     full measure rather than inheriting the narrow lead width. */
-  .article-body.has-margin > .lead {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .article-body.has-margin > .margin-note {
-    grid-column: 3;
-    grid-row: 2;
-    align-self: start;
-    background: transparent;
-    border-left: none;
-    padding: 6px 0 0;
-    margin: 0;
-  }
-  .article-body.has-margin > .margin-note p {
-    font-size: var(--type-small);
-    line-height: 1.5;
-    color: var(--muted);
-  }
-}
-
-/* =========================================================================
    PAPER PARTS (ledger)
    ========================================================================= */
+.eligibility h3 { margin-bottom: 10px; }
+.eligibility p {
+  margin: 0 0 1em;
+  color: var(--ink);
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+.eligibility p:last-child { margin-bottom: 0; }
+
 .paper-intro { margin-top: 44px; }
-.paper-intro .eyebrow { margin-bottom: 14px; }
-.paper-intro h3 { margin-bottom: 8px; }
-.paper-intro p { color: var(--muted); margin: 0; }
+.paper-intro h3 { margin-bottom: 10px; }
+.paper-intro p { color: var(--muted); margin: 0; line-height: 1.6; }
+.paper-intro strong { color: var(--ink-soft); font-weight: 550; }
 
 .paper-parts {
   margin: 26px 0 40px;
@@ -626,19 +573,21 @@ blockquote p:last-child { margin-bottom: 0; }
   list-style: none;
   border-top: 1px solid var(--line-strong);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .paper-parts li {
   padding: 24px 0;
   border-bottom: 1px solid var(--line);
 }
 .paper-parts li:first-child {
-  padding-right: 32px;
+  padding-right: 24px;
   border-right: 1px solid var(--line);
 }
-.paper-parts li:last-child {
-  padding-left: 32px;
+.paper-parts li:nth-child(2) {
+  padding-inline: 24px;
+  border-right: 1px solid var(--line);
 }
+.paper-parts li:nth-child(3) { padding-left: 24px; }
 .paper-parts span {
   display: block;
   font-size: var(--type-label);
@@ -1102,6 +1051,7 @@ blockquote p:last-child { margin-bottom: 0; }
    ========================================================================= */
 .submission { background: var(--surface); }
 .submission .eyebrow { color: var(--accent-deep); }
+.submission-template { margin-bottom: 30px; }
 .submission-status {
   margin: 8px 0 12px;
   padding: 22px 0;
@@ -1363,15 +1313,18 @@ blockquote p:last-child { margin-bottom: 0; }
     padding-right: 0;
     border-right: none;
   }
-  .paper-parts li:last-child,
+  .paper-parts li:nth-child(2),
   .stages li:nth-child(even) {
-    padding-left: 0;
+    padding-inline: 0;
+    border-right: none;
   }
+  .paper-parts li:nth-child(3) { padding-left: 0; }
 }
 
 @media (max-width: 620px) {
   :root { --type-body: 17px; }
   .hero { padding: 72px 0 60px; }
+  .hero-actions { align-items: flex-start; flex-direction: column; }
   .speaker-profile {
     grid-template-columns: 96px minmax(0, 1fr);
     gap: 14px;

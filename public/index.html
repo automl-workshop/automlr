@@ -52,8 +52,11 @@
         <p class="eyebrow" data-reveal>NeurIPS 2026 · Sydney</p>
         <h1 data-reveal>Workshop for Autonomous <em>Machine Learning</em> Research</h1>
         <p class="hero-deck" data-reveal>Autonomous research, human judgment.</p>
-        <p class="hero-summary" data-reveal>A discussant-led workshop rethinking how autonomous research enters the machine learning community.</p>
-        <a class="arrow-link" href="#call" data-reveal>Read the call for papers <span aria-hidden="true">&#8600;</span></a>
+        <p class="hero-summary" data-reveal>A discussant-led workshop where autonomous ML research is evaluated through independent review and public dialogue.</p>
+        <div class="hero-actions" data-reveal>
+          <a class="arrow-link" href="#call">Read the call for papers <span aria-hidden="true">&#8600;</span></a>
+          <a class="arrow-link" href="#submit">Submission information <span aria-hidden="true">&#8600;</span></a>
+        </div>
         <canvas id="research-paper" class="hero-research" aria-hidden="true"></canvas>
       </section>
 
@@ -74,7 +77,7 @@
             <div class="prose">
               <p>The research process comprises the formulation of a hypothesis, the design of an experiment, and the judgment of a result. The implicit assumption that this process is a fundamentally human act is suddenly being challenged by autonomous research.</p>
               <p>Given the development of agent harnesses that can pursue long-horizon tasks, we believe it is time for the community to formally recognize and plan for the inevitability of impactful autonomous research.</p>
-              <p>Our goal is to make autonomous research meaningful in a way that strengthens the ML community without undermining the role of human researchers. The workshop brings this structural change into the open and anchors autonomous research in human judgment and participation.</p>
+              <p>Our goal is to make autonomous research meaningful in a way that strengthens the ML community without undermining the role of human researchers. The workshop brings this structural change into the open and anchors autonomous research in human judgment and participation. Each accepted paper is presented in person by an author. A qualified non-author serves as its discussant, responding to the work and helping lead discussion with the audience. This format grounds autonomous research in the human work of communicating, scrutinizing, and building shared scientific understanding.</p>
             </div>
             <blockquote>
               <p>Just as Pandora&rsquo;s Box cannot be closed, the effect of frontier models on researchers now and in the future cannot be undone.</p>
@@ -87,38 +90,39 @@
       <section class="page-section" id="call">
         <div class="article-layout shell">
           <p class="section-index"><span>02</span></p>
-          <div class="article-body has-margin" data-scroll>
-            <h2>What belongs here?</h2>
-            <p class="lead">This workshop is for ML research in which an autonomous agent either conducted the research end-to-end or made the decisive contribution to the paper&rsquo;s primary result.</p>
-
-            <aside class="definition margin-note" aria-label="The primary-result test">
-              <h3>The primary-result test</h3>
-              <p>The primary result must be stated in the abstract. The agent&rsquo;s contribution is decisive if, without it, that result would not hold or the paper&rsquo;s main conclusions would be materially different.</p>
-            </aside>
+          <div class="article-body" data-scroll>
+            <h2>Paper format and submission</h2>
+            <div class="eligibility">
+              <h3>Eligibility</h3>
+              <p>We invite machine learning research in which an autonomous agent either conducted the research end-to-end or made a decisive contribution to the paper&rsquo;s primary result. The paper must state the qualifying result in its abstract. Without the agent&rsquo;s contribution, the qualifying result could not have been established, or the paper&rsquo;s main conclusions would be materially different.</p>
+              <p>Every submission must include both a qualifying ML research result and a detailed account of the autonomous system that produced it. Neither component is sufficient on its own. Autonomous research in other scientific domains is outside the workshop&rsquo;s scope.</p>
+            </div>
 
             <div class="paper-intro">
-              <p class="eyebrow">Required paper structure</p>
-              <h3>One submission, two parts.</h3>
-              <p>Every paper should let readers evaluate both the research contribution and the process that produced it.</p>
+              <h3>Required paper structure</h3>
+              <p><strong>Your paper must have three clearly labelled parts.</strong> Parts 1 and 2 each have a four-page maximum; Part 3 has a one-page maximum.</p>
             </div>
             <ol class="paper-parts">
               <li>
-                <span>Part 1</span>
-                <h3>AI-generated research</h3>
-                <p>Present the research itself: the hypothesis, method, evidence, and primary result generated or developed by the agent.</p>
+                <span>Part 1 · 4 pages</span>
+                <h3>Auto research result</h3>
+                <p>Present the machine learning research itself: the hypothesis, method, evidence, and primary result generated or developed by the agent.</p>
               </li>
               <li>
-                <span>Part 2</span>
+                <span>Part 2 · 4 pages</span>
                 <h3>System design</h3>
                 <p>Describe the agent, harness, tools, research loop, human interventions, provenance, and verification used to produce the work.</p>
               </li>
+              <li>
+                <span>Part 3 · 1 page</span>
+                <h3>Reflections</h3>
+                <p>Offer broader reflections on how the field should respond to autonomous research and how conference and workshop formats should change.</p>
+              </li>
             </ol>
-
-            <p class="scope-note"><strong>Scope.</strong> A systems-only paper is not eligible without a qualifying research result. The workshop is focused specifically on machine learning research, rather than autonomous research in unrelated scientific domains.</p>
-            <p class="scope-note"><strong>Human authorship.</strong> Authorship remains exclusively human. Authors curate the work, verify its claims, disclose agent involvement, and remain responsible for the final submission.</p>
 
             <div class="disclosure">
               <p class="eyebrow">Disclosure policy</p>
+              <p><strong>Authorship remains exclusively human.</strong> Authors curate the work, verify its claims, disclose agent involvement, and remain responsible for the final submission.</p>
               <p>Because this workshop&rsquo;s premise is that an autonomous agent may drive research, <strong>we expect much of Part 1 to be generated and written by the agent</strong> (including writing, figures, etc.). However, in keeping with wider <a href="https://neurips.cc/Conferences/2026/MainTrackHandbook#:~:text=Author%20Use%20of%20Agents%20and%20Large%20Language%20Models%20%28LLMs%29">NeurIPS policy</a>, authors are ultimately responsible for the entire content of the paper, including all text, figures, and references.</p>
               <p>To ensure that authors remain in compliance with <a href="https://neurips.cc/Conferences/2026/MainTrackHandbook#:~:text=Author%20Use%20of%20Agents%20and%20Large%20Language%20Models%20%28LLMs%29">NeurIPS policy</a>, Part 2 of the submission will be an extended meta-analysis and discussion of the role and design of the agent in the research process. <strong>We expect Part 2 to be human-written</strong>; this will include details on the agent, prompts, harness, tools, research loop, human interventions, and verification.</p>
               <p>Authors are responsible for ensuring that all content is correct and original and for verifying tool outputs&mdash;including guarding against hallucinated results, figures, or citations. Scientific integrity rests with the human authors.</p>
@@ -133,7 +137,7 @@
           <p class="section-index"><span>03</span></p>
           <div class="article-body" data-scroll>
             <h2>Discussant format</h2>
-            <p class="lead">A discussant is a non-author whose role is to help the audience understand and engage with an accepted paper. <em>The model is common in the social sciences, but remains unfamiliar in machine learning.</em></p>
+            <p class="lead">A discussant is a non-author who prepares an independent reading of an accepted paper, responds to the author&rsquo;s summary, and helps lead the ensuing discussion with the audience. <em>The model is common in the social sciences, but remains unfamiliar in machine learning.</em></p>
             <div class="prose">
               <p>Traditionally, accepted conference papers are presented by their authors, while reviewers disappear into the background. For autonomous research, we propose that the allocation of attention be reversed. If autonomous systems can produce candidate papers at scale, the scarce human contribution becomes the ability to evaluate AI-generated claims.</p>
               <p>The discussant is not a co-author and does not replace the author. They bring an independent, informed perspective to the work: why its primary result deserves attention, which evidence is most persuasive, what limitations remain, and what the community should discuss next.</p>
@@ -154,16 +158,16 @@
 
             <ol class="stages" aria-label="The four stages of the discussant process">
               <li><span>01 · Review</span><h3>Blind decision-making</h3><p>Submissions remain blind and reviewers anonymous. Reviewers assess the work independently under the NeurIPS conflict-of-interest policy.</p></li>
-              <li><span>02 · Selection</span><h3>An accepting reviewer</h3><p>A discussant is chosen from reviewers who advocated acceptance&mdash;first from volunteers, otherwise by random selection.</p></li>
+              <li><span>02 · Selection</span><h3>An attending discussant</h3><p>We first invite an accepting reviewer who plans to attend in person. If none is available, the organizers appoint a qualified discussant from the workshop&rsquo;s in-person attendees.</p></li>
               <li><span>03 · Preparation</span><h3>An independent reading</h3><p>The discussant prepares an account of the contribution, strongest evidence, unresolved limitations, and questions for the author.</p></li>
-              <li><span>04 · Workshop</span><h3>Summary, response, dialogue</h3><p>The author gives a brief summary. The discussant responds, opening a dialogue with the author and audience.</p></li>
+              <li><span>04 · Workshop</span><h3>Summary, response, dialogue</h3><p>An attending author briefly presents the work. The discussant responds, opening a dialogue with the author and audience.</p></li>
             </ol>
 
             <details class="expander">
               <summary>Full review and attribution policy</summary>
               <div class="details-copy">
-                <p>Each submission must nominate <strong>min(number of authors, 3)</strong> qualified reviewers who may be called upon as discussants. Program chairs will ensure that each accepted submission receives at least three independent reviews, supplementing the reviewer pool when necessary.</p>
-                <p>Blind decision-making remains separate from open post-acceptance discussion. After acceptance, accepted papers will be published with their reviews and reviewers. The discussant will be identified and credited for their contribution to the session.</p>
+                <p>Each submission must designate <strong>min(3, number of authors)</strong> authors who agree to review other workshop submissions. Program chairs will ensure that every submission receives at least three independent reviews, supplementing the reviewer pool when necessary.</p>
+                <p>Blind decision-making remains separate from open post-acceptance discussion. After acceptance, accepted papers will be published with their reviews and reviewers. We will first invite an accepting reviewer who expects to attend in person to serve as discussant. If none is available, the organizers will appoint a qualified discussant from the workshop&rsquo;s in-person attendees. The discussant will be identified and credited for their contribution to the session.</p>
               </div>
             </details>
           </div>
@@ -278,17 +282,26 @@
 
       <section class="submission" id="submit">
         <div class="article-layout shell">
-          <p class="section-index">Submission</p>
+            <p class="section-index">Submission</p>
           <div class="article-body" data-scroll>
             <h2>Prepare your work.</h2>
-            <p class="lead">OpenReview, formatting, paper length, and final disclosure instructions are coming soon.</p>
+            <p class="lead">Prepare your paper using the workshop template. OpenReview and final disclosure instructions are coming soon.</p>
+            <a class="arrow-link submission-template" href="https://www.overleaf.com/8637162613fqyzvhwjvhhz#95f5a7" target="_blank" rel="noopener">Open the Overleaf template <span aria-hidden="true">&#8599;</span></a>
+            <p class="scope-note"><strong>Length and structure.</strong> Submissions must contain three clearly labelled parts. Part 1 may be up to four pages, Part 2 may be up to four pages, and Part 3 may be up to one page. These limits apply separately and may not be reallocated between parts. The total limit is nine pages, excluding references.</p>
+            <p class="scope-note"><strong>Submission limit.</strong> An individual who is listed as first author on one submission may not appear as an author on any other workshop submission.</p>
+            <p class="scope-note"><strong>Reviewing commitment.</strong> Each submission must designate <strong>min(3, number of authors)</strong> authors who agree to review other workshop submissions. A single-author paper supplies one reviewer, a two-author paper supplies two, and a paper with three or more authors supplies three.</p>
+            <p class="scope-note"><strong>In-person participation.</strong> All paper presentations and discussant sessions will take place in person. Accepted papers should be represented in Sydney by at least one author, who will briefly present the work and participate in the author&ndash;discussant session.</p>
             <div class="submission-status"><span class="pending">Submission details pending<span class="sr-only"> (status: to be announced)</span></span><p>The submission link will appear here when the portal opens.</p></div>
             <details class="expander faq">
               <summary>Common questions</summary>
               <div class="faq-list">
                 <details><summary>What counts as autonomous ML research?</summary><p>ML research in which an autonomous agent either conducted the research end-to-end or made the decisive contribution to the paper&rsquo;s primary result.</p></details>
                 <details><summary>Can humans still be authors?</summary><p>Yes. Authorship remains exclusively human. Authors curate the work, verify its claims, disclose agent involvement, and remain responsible for the final submission.</p></details>
-                <details><summary>Can I submit a systems-only paper?</summary><p>No. The submission must contain a qualifying ML research result. The system that produced it should be documented in Part 2.</p></details>
+                <details><summary>Can I submit a systems-only paper?</summary><p>No. Every submission must include both a qualifying ML research result and a detailed account of the autonomous system that produced it.</p></details>
+                <details><summary>Can I reallocate pages between the three parts?</summary><p>No. Part 1 and Part 2 are each limited to four pages, and Part 3 is limited to one page. These limits apply separately.</p></details>
+                <details><summary>How many papers may I submit?</summary><p>An individual may be listed as first author on only one submission and, if listed as first author, may not appear on any other workshop submission.</p></details>
+                <details><summary>Are authors expected to review?</summary><p>Yes. Each submission must designate <strong>min(3, number of authors)</strong> authors who agree to review other workshop submissions.</p></details>
+                <details><summary>Must authors and discussants attend in person?</summary><p>All presentations and discussant sessions will take place in person. Accepted papers should be represented by at least one attending author. We will select discussants based on in-person availability, appointing a qualified attendee if an original reviewer cannot attend.</p></details>
                 <details><summary>Is the workshop archival?</summary><p>No. Authors may continue developing and submitting their work elsewhere, subject to those venues&rsquo; policies.</p></details>
               </div>
             </details>
