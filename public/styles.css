@@ -1057,7 +1057,27 @@ blockquote p:last-child { margin-bottom: 0; }
    ========================================================================= */
 .submission { background: var(--surface); }
 .submission .eyebrow { color: var(--accent-deep); }
-.submission-template { margin-bottom: 30px; }
+.submission-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+  margin-bottom: 30px;
+}
+.submission-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: var(--paper);
+}
+.submission-primary:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+}
 .submission-status {
   margin: 8px 0 12px;
   padding: 22px 0;
