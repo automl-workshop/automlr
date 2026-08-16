@@ -845,6 +845,36 @@ blockquote p:last-child { margin-bottom: 0; }
   font-size: var(--type-body);
   text-align: right;
 }
+.date-list .deadline-dates,
+.date-list .deadline-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.date-list .deadline-dates {
+  align-items: flex-start;
+  text-align: left;
+}
+.date-list .deadline-dates del {
+  color: var(--faint);
+  text-decoration-color: var(--faint);
+  text-decoration-thickness: 1px;
+}
+.date-list .deadline-dates del time {
+  color: var(--faint);
+  font-size: var(--type-label);
+}
+.date-list .deadline-label {
+  align-items: flex-end;
+}
+.date-list .deadline-label small {
+  font-family: var(--mono);
+  font-size: var(--type-label);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
 .schedule { border-top: 1px solid var(--line-strong); }
 .schedule .time { min-width: 92px; }
 
@@ -1376,6 +1406,7 @@ blockquote p:last-child { margin-bottom: 0; }
   }
   .date-list span,
   .schedule span:not(.time) { text-align: left; }
+  .date-list .deadline-label { align-items: flex-start; }
   .people-group > div { flex-wrap: wrap; gap: 2px 12px; }
   .people-group dd { text-align: left; }
 }
