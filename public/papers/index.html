@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore the 22 accepted papers at the NeurIPS 2026 AutoMLR Workshop, with authors, abstracts, and OpenReview links.">
+    <title>Accepted Papers · AutoMLR Workshop · NeurIPS 2026</title>
+
+    <meta name="theme-color" content="#F5F4EE">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Accepted Papers · AutoMLR Workshop · NeurIPS 2026">
+    <meta property="og:description" content="A discussant-led workshop rethinking how autonomous research enters the machine learning community.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://automlr.com/papers/">
+    <meta property="og:image" content="https://automlr.com/og.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Accepted Papers · AutoMLR Workshop · NeurIPS 2026">
+    <meta name="twitter:description" content="A discussant-led workshop rethinking how autonomous research enters the machine learning community.">
+    <meta name="twitter:image" content="https://automlr.com/og.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F5F4EE'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%233049D0' stroke-width='1.5'/%3E%3Ctext x='16' y='20.5' font-family='Georgia,serif' font-size='9.5' fill='%233049D0' text-anchor='middle'%3EA%2FML%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,400..500;1,6..72,400..500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="site-nav shell" aria-label="Primary navigation">
+        <a class="wordmark" href="/" aria-label="Home — Workshop for Autonomous Machine Learning Research"><span class="mark" aria-hidden="true">A/ML</span><span>Workshop for Autonomous Machine Learning Research</span></a>
+        <div class="nav-links">
+          <a class="nav-index" href="/#about">About</a>
+          <a class="nav-index" href="/#call">Call</a>
+          <a class="nav-index" href="/#format">Format</a>
+          <a class="nav-index" href="/#people">People</a>
+          <a class="button-link nav-index" href="/papers/" aria-current="page">Papers</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="page-section" id="papers">
+        <div class="article-layout shell">
+          <p class="section-index"><a href="/">&#8592; Workshop home</a></p>
+          <div class="article-body">
+            <p class="eyebrow">NeurIPS 2026 · AutoMLR Workshop</p>
+            <h1 class="papers-title">Accepted papers</h1>
+            <p class="lead">22 accepted papers · 4 oral presentations · 3 spotlights · 15 posters</p>
+            <nav class="paper-jump-links" aria-label="Accepted paper categories">
+              <a href="#papers-oral"><strong>Oral presentations</strong><span>4 papers</span></a>
+              <a href="#papers-spotlight"><strong>Spotlights</strong><span>3 papers</span></a>
+              <a href="#papers-poster"><strong>Posters</strong><span>15 papers</span></a>
+            </nav>
+            <div class="paper-group" id="papers-oral">
+              <div class="paper-group-heading"><h2 class="paper-group-title">Oral presentations</h2><span class="paper-count">4 papers</span></div>
+              <ul class="accepted-paper-list">
+                <li class="accepted-paper" id="paper-19">
+                  <p class="paper-type paper-type-oral">Oral</p>
+                  <h3>Agora: Git as Shared Memory for Collective AutoResearch</h3>
+                  <p class="paper-authors">Yifan Zhang, Yunheng Zou, Shaokun Zhang, Jian Hu, Hao Zhang, Binfeng Xu, Jan Kautz, Yi Dong</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Agora: Git as Shared Memory for Collective AutoResearch</span></summary>
+                    <p>Autonomous research loops such as AutoResearch show that a single coding agent can improve a training setup unattended. Run several of them and each session starts from scratch, so more agents tend to mean more duplicated search rather than more discovery. We present Agora, a shared memory for such agents: research is recorded as an append-only directed acyclic graph (DAG) stored in Git, so that every claim is a commit anyone can check out and rerun. Each result, insight, hypothesis, verification, and report is an immutable commit whose parent edges say what it builds on; a derived index exposes the frontier, the neglected branches, and the verification status of each claim. We report the first sustained use of Agora: a run of nearly 12 days in which 13 language-model workers, with no assigned tasks and no central planner, worked on a weight-transfer problem. Given 141 pretrained donor models and a frozen 119.6M-parameter attention–SSM hybrid whose dimensions match no donor, the workers had to initialize the target without training data or gradient updates. They published 1,703 contributions and drove the evaluator from 3.39 to 1.899 bits per byte, closing 62% of the gap to a trained GPT-2 124M. The winning recipe compresses donor next-token statistics into the target&#x27;s embedding and output head, then adds a short-range context signal through sparse edits to attention, feed-forward, and state-space blocks. Its 145-commit ancestry spans 15 accounts, and 165 independent reproductions were posted, none of which failed. We describe the system and harness, the single mid-run human intervention that pulled the community out of a monoculture, and what the trace does and does not establish.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-8">
+                  <p class="paper-type paper-type-oral">Oral</p>
+                  <h3>Formally Verified Autoresearch for Analyzing the Expressivity of Multi-Head Attention</h3>
+                  <p class="paper-authors">Karthik Viswanathan, Plamen Dimitrov, Stefano Rocca, Sarayu Sirikonda</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Formally Verified Autoresearch for Analyzing the Expressivity of Multi-Head Attention</span></summary>
+                    <p>Multi-head attention is a central component of the transformer architecture, yet how its expressivity depends on the number of heads remains poorly understood. We study a one-layer, attention-only transformer and define the head complexity $H^\ast(f)$ of a Boolean function $f$ as the minimum number of attention heads required to represent it. Our main result exactly characterizes head complexity $H^\ast(f)$ for symmetric Boolean functions, showing that it equals the number of times $f$ changes value between consecutive Hamming-weight levels. Beyond the symmetric setting, we prove that threshold degree provides a lower bound on head complexity and give an explicit example showing that this lower bound is not always tight. These results were discovered and formalized by a frontier model through conjecture generation, theorem proving, and machine verification, while human researchers asked the high-level questions and reviewed the generated theorems. This work also lays the groundwork for a publicly available Lean codebase intended to support agent-assisted theorem proving and formal verification in mechanistic interpretability. More broadly, this work serves as a proof of concept for a broader research program that leverages the mathematical capabilities of frontier models, grounded by formal verification, to build towards a fundamental understanding of transformer architectures.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-12">
+                  <p class="paper-type paper-type-oral">Oral</p>
+                  <h3>MLE Agents: Autonomous ML Engineering in Production Recommendation Systems</h3>
+                  <p class="paper-authors">Matthew Li, Albert Jiongqian Liang, Dilip Raj</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: MLE Agents: Autonomous ML Engineering in Production Recommendation Systems</span></summary>
+                    <p>The typical workflow for improving large-scale ranking and recommendation models is slow and tedious: an engineer forms a hypothesis, implements it as a code change, trains a model, and evaluates it both offline and online, often relying on their own intuition and experience along the way. Autonomous LLM agents promise to speed this up by running the loop on their own, but it is still unclear whether they can do this in real industry-scale production systems rather than on benchmarks or small proxy tasks. We build human-on-the-loop machine learning engineer (MLE) agents that propose, implement, train, and evaluate model changes on production search rankers serving over a billion requests a day. Engineers retain control over objective design, search direction, final-model review, and online deployment. Each agent writes a model change as code, launches a training job, reads the offline evaluation, and decides whether to keep it. We identify three obstacles that make this industry setting challenging: feedback takes hours per experiment, offline metrics do not always predict online impact, and improvements saturate after the early wins. We address these with parallel training runs, an objective calibrated to match online impact, and careful context engineering (a &quot;what didn&#x27;t work&quot; blocklist, strict output formats, and an anti-staleness rule). In one campaign, the system ran 1,097 completed candidate experiments and accepted 325, raising the win rate from 15.6% to 29.6% of candidate runs. Its best model launched to production, increasing click-through rate by 0.70% and search volume by 0.23% in an online A/B test on approximately 10 million users. Several of these improvements were novel architectural changes the team had never tried -- mechanisms drawn from the broader industry and literature that had not previously been considered for this stack -- suggesting that MLE agents can explore regions of the design space that human intuition overlooks. Notably, we find that the design of the harness around the model matters significantly: intuition suggests that a stronger underlying model is enough, but in our experience, the design of the loop around it is just as critical. More broadly, our work shows that autonomous agents can do real machine-learning engineering in high-stakes production systems.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-25">
+                  <p class="paper-type paper-type-oral">Oral</p>
+                  <h3>The Fundamental Theorem of Statistical Learning in Three Weeks</h3>
+                  <p class="paper-authors">Dhruv Gupta</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: The Fundamental Theorem of Statistical Learning in Three Weeks</span></summary>
+                    <p>In three weeks, I developed a complete Lean 4 mechanization of a realizable binary Fundamental Theorem of Statistical Learning with Claude Opus 4.6, designing the premise and proof strategies and correcting definitions while Claude developed the Lean proofs. The characterization connects PAC learnability, finite VC dimension, finite-advice compression, uniform Rademacher vanishing, and polynomial growth, with a sample-complexity witness. A multiplicative-weights construction replaces exact minimax in Moran–Yehudayoff compression; ghost-sample symmetrization supplies the VC-to-PAC direction. The development also formalizes Gold&#x27;s theorem, the Littlestone characterization, and measurability separations. It contains 21,745 lines across 53 files, 352 theorem or lemma declarations, and zero active sorry or admit terms. To my knowledge, this is the first complete mechanization of the stated characterization, under explicit regularity assumptions including measurability of all Boolean-valued functions on the domain. Claude&#x27;s sustained proof construction enabled these foundations and an attention-router investigation I would otherwise not have undertaken.</p>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="paper-group" id="papers-spotlight">
+              <div class="paper-group-heading"><h2 class="paper-group-title">Spotlights</h2><span class="paper-count">3 papers</span></div>
+              <ul class="accepted-paper-list">
+                <li class="accepted-paper" id="paper-17">
+                  <p class="paper-type paper-type-spotlight">Spotlight</p>
+                  <h3>A Label-Noise-Gated Sign Flip in Validation-Based Early Stopping</h3>
+                  <p class="paper-authors">Sharath T S, Sumukh M G, Pramodh Krishna, Anshul, Shreyas Lal, Praneeth Kashyap Ramesh Naga</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: A Label-Noise-Gated Sign Flip in Validation-Based Early Stopping</span></summary>
+                    <p>An autonomous experiment loop can decide, without human review of each run, when to stop training a model using a held-out validation split. We study whether that decision is reliably beneficial. Using a fully autonomous research loop, we ran 750 controlled training runs of a two-layer MLP on sklearn&#x27;s digit-recognition dataset, sweeping validation-set size $v \in \{10,20,50,100,150\}$ and symmetric label-noise rate $p \in \{0,0.1,0.2,0.3,0.4\}$ with 30 seeds per cell, and compared validation-selected stopping against a naive fixed-epoch-budget baseline that ignores the validation split entirely. Qualifying result: the sign of the gap between the two policies flips with label noise. At $p=0$, validation-based stopping loses to the fixed-budget baseline at every tested validation size (win rate 3--13\%, Holm-corrected Wilcoxon $p&lt;0.002$ in all five cells), because the network exhibits benign overfitting and test accuracy does not meaningfully decline within the training budget, so any early exit yields no benefit and, in the large majority of seeds, a measurable loss. At $p \geq 0.2$, validation-based stopping wins with high probability (70--87\% at $v=10$, $\geq$93\% at $v \geq 50$); its margin grows with $p$ throughout, and with $v$ up to $v \approx 50$--$100$, past which it narrows again (e.g.\ $+0.185$ at $v{=}100$ vs.\ $+0.160$ at $v{=}150$ for $p=0.4$). At the smallest budget and lowest nonzero noise level tested ($v=10$, $p=0.1$), the advantage is not statistically distinguishable from zero. The sign flip replicates at two additional architectures not used to derive it. The result was reached after an initial experiment configuration produced an uninformative null regime; the agent diagnosed the cause, changed the configuration, and recovered a different and better-supported finding than the one originally hypothesized.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-29">
+                  <p class="paper-type paper-type-spotlight">Spotlight</p>
+                  <h3>AUTOEMBED: Can Coding Agents Train Text Embedding Models?</h3>
+                  <p class="paper-authors">Adnan El Assadi, Isaac Chung, Deep Shah</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: AUTOEMBED: Can Coding Agents Train Text Embedding Models?</span></summary>
+                    <p>Can coding agents autonomously train useful text embedding models? We introduce AutoEmbed, a configurable framework and benchmark for developing and evaluating embedding models under fixed budgets. Each run provides a base model, one H100, and ten hours. We split every evaluation task in half: the agent develops on one half and is scored on the other. Across 58 runs by four agents, six settings test building from a raw encoder, improving a strong embedder, and adapting an embedder to legal, financial, medical, and code retrieval. The base model&#x27;s headroom dominates performance. All four agents raise the raw encoder&#x27;s score from 38.0 to 58.2--62.8, and the best comes within 1.5 points of a same-size published embedder, although retrieval remains fourteen points behind it. None meaningfully improves the strong embedder; domain gains range from 0.2 to 8.5 points. The method an agent chooses is associated with its outcome: full fine-tuning gains 8.9 points on average against 2.2 for low-rank adaptation, though the comparison is observational. Every submission declares its training data, and the audit finds no run trained on a hidden query with its relevant document. Reviewing traces and checkpoints reveals what the audit cannot: six submissions use prompts keyed to evaluation task names, and one submitted encoder is byte-identical to its base, with prompts supplying two thirds of its gain. Whether such conditioning is adaptation or reward hacking depends on what a benchmark sets out to measure, a line contamination auditing cannot draw. Code and artifacts will be released upon publication.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-13">
+                  <p class="paper-type paper-type-spotlight">Spotlight</p>
+                  <h3>Coding Agents as Autonomous World-Model Researchers</h3>
+                  <p class="paper-authors">Marjan Moodi, Xuankang Zhu, Fernando de Mesentier Silva, Harold Chaput, Mohammad Reza Taesiri</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Coding Agents as Autonomous World-Model Researchers</span></summary>
+                    <p>Can coding agents make useful machine-learning research progress when the direction of improvement is left open-ended? We study this question in world modeling, asking whether coding agents can autonomously improve the predictive accuracy and long-horizon rollout quality of a given world model under a fixed compute budget. Each session provides an agent with a base world model, structured trajectories, and a read-only evaluator. The agent forms its own hypotheses, edits the model or training code, evaluates the result, and decides what to try next. We assess this setting across eight games and four base architectures. To distinguish genuine model improvement from overfitting to the validation signal, we evaluate the discovered models on a separate, human-designed suite of scenarios that is never exposed during the search process. We also compare against compute-matched random search and Optuna/TPE, repeat the experiments across additional seeds, and audit the sessions for scorer tampering. Importantly, the interventions are proposed, implemented, and selected entirely by the agents, making the resulting improvements a product of the autonomous model-development loop rather than human-specified optimization. We run 64 independent agent sessions, each lasting six hours. Across these runs, Codex (GPT-5.4) and Claude Code (Opus 4.6) improve the base model on the held-out test split in 63 cases, with a mean improvement of +0.196. The gains are largest at longer rollout horizons, where autoregressive error compounds: +0.205 at h=10 and +0.215 at h=20, compared with +0.056 at h=1. In 58 of the 64 runs, the best-performing intervention changes the architecture, objective, representation, rollout procedure, or inference rule rather than simply tuning a scalar hyperparameter. The resulting models mostly improve on the human-designed test scenarios, showing that the discovered interventions generalize beyond the validation signal used during search. These results provide evidence that current coding agents can carry out a constrained but end-to-end machine-learning research process.</p>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="paper-group" id="papers-poster">
+              <div class="paper-group-heading"><h2 class="paper-group-title">Posters</h2><span class="paper-count">15 papers</span></div>
+              <ul class="accepted-paper-list">
+                <li class="accepted-paper" id="paper-35">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Agentic Data Engineering for LLMs: System Design and a Controlled Empirical Study</h3>
+                  <p class="paper-authors">Ruomeng Ding, Qianli Shen, ZhaoYang Han, Meixin Chen, Daoyuan Chen, Yaliang Li</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Agentic Data Engineering for LLMs: System Design and a Controlled Empirical Study</span></summary>
+                    <p>AI-for-AI (AI4AI), which uses AI systems to improve the data, training algorithms, and feedback used to develop other AI models, is a promising and rapidly growing direction. Yet two questions remain open: can an AI4AI system propose strategies that improve a target model on evaluation data not used in the research loop, and can it iteratively refine these strategies using cumulative feedback? To study these questions under a controlled research process, we introduce Agentic Data Engineering (ADE), a system for LLM data engineering. In ADE, agents drive the research process: they propose strategies, choose what to explore, and refine their strategies using experiment feedback. A fixed protocol governs experiment execution and in-loop evaluation, while keeping held-out evaluation outside the research loop. We study ADE on data selection and reward design. Across in-loop-selected strategies, the largest absolute held-out gain over the generic baseline is 13.34% on AIME25 Pass@32. Across four held-out benchmarks, absolute macro-averaged Pass@K gains reach 5.85%, 2.72%, and 2.97% for Math SFT, Code SFT, and Math RFT, respectively. Reward design improves coverage under repeated sampling despite limited gains in average correctness. Research trajectories show successive in-loop improvements and evidence-guided strategy revision and combination, with returns on additional research capacity varying across tasks. Together, our study shows how a controlled research process can separately assess whether AI4AI discovers strategies that improve performance on unseen data and whether cumulative feedback leads to progressively better strategies.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-15">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Agreement-Gated Distillation for Selective Forgetting in Knowledge Revision</h3>
+                  <p class="paper-authors">Yaqian Zhang, Bernhard Pfahringer, Eibe Frank, Albert Bifet</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Agreement-Gated Distillation for Selective Forgetting in Knowledge Revision</span></summary>
+                    <p>We formalize \emph{Selective Forgetting for Knowledge Revision} (SF-KR): correcting a class&#x27;s
+learned mapping when higher-quality data arrives. Continual-learning protection assumes old knowledge should be uniformly
+preserved; revision breaks that assumption: some old behavior is precisely what must be
+overwritten. Standard Knowledge Distillation (KD) toward a frozen pre-revision teacher protects everything equally. Reducing the weight of the KD loss does not recover effective revision. This is a failure mode we
+call \emph{Revision Deadlock}. The key question shifts from \emph{how strongly} to protect old
+knowledge to \emph{which} old knowledge should be protected. We propose, \emph{Revision-Masked
+Distillation} (RMD), which is an oracle reference, assuming privileged knowledge of the revised
+classes. As this information may not be available in practice, we also propose \emph{Agreement-Gated Distillation} (AGD), which attempts to estimate which knowledge should be retained and which should be revised based on how strongly the teacher&#x27;s own prediction agrees with each incoming label, without access to a revised-class list. Compared by their \emph{Pareto frontier} over Revision and Retention Accuracy rather than a single operating point, RMD&#x27;s frontier dominates KD&#x27;s entirely and AGD&#x27;s substantially improves
+on KD&#x27;s under equal information, on both CIFAR-100 and CUB-200-2011.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-20">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>AutoLMCompress: A Composable Framework for Autonomous Research on Language Model Compression</h3>
+                  <p class="paper-authors">Jiacheng Liu, Yaxin Luo, Xiaohan Zhao, Peng Sun, Xinyi Shang, Jiacheng Cui, Yonina C. Eldar, Zhiqiang Shen</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: AutoLMCompress: A Composable Framework for Autonomous Research on Language Model Compression</span></summary>
+                    <p>We present AutoLMCompress, a verifiable, composable, and scalable framework for autonomous research on language-model compression. Human researchers define the research question, add their priors or inductive biases, and approve the evaluation protocol; within this scope, the framework reviews prior work, develops compression methods, evaluates them against baselines adapted to the target setting, and verifies the reported results. We apply AutoLMCompress to Per-Layer Embeddings (PLE) in Gemma 4, an instance of a recent trend toward scaling embedding capacity alongside Transformer computation. PLE accounts for 35.2% of the parameters in the E4B checkpoint, making it a substantial target for storage reduction. Motivated by cross-layer redundancy, the framework developed **cross-layer latent vector quantization (VQ)**, which stores one quantized latent code tuple per token and maps it to each layer through a layer-specific affine decoder. Near **100× compression** of PLE storage, cross-layer latent VQ achieves 97.8% retention across seven benchmarks (the geometric mean of per-benchmark performance relative to the same checkpoint with uncompressed PLE), compared with 66.3% for product quantization. With the official E4B checkpoint using 4-bit linear weights and 16-bit activations (W4A16), the same method achieves 96.9% retention. It outperforms the strongest evaluated baseline by **31.5** percentage points with BF16 weights and **14.0** percentage points with W4A16 weights.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-7">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Autonomous Research for Open-Ended Problems: A Case Study on Telecom Ticket Retrieval</h3>
+                  <p class="paper-authors">Junghyun Min, Mohamed Trabelsi</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Autonomous Research for Open-Ended Problems: A Case Study on Telecom Ticket Retrieval</span></summary>
+                    <p>Recent breakthroughs in LLM-based systems and their abilities in problem solving and coding has allowed progress in the AI for Science paradigm, replacing human roles in machine learning (ML) research in part or even in full.
+However, while several frameworks of fully autonomous end-to-end ML research have been proposed, successful implementation of them are often limited to problems with narrow search spaces, like language modeling or biomedical ML benchmarks.
+In this paper, we explore how autonomous research frameworks can be adapted to solve open-ended, insdustry-grade ML problems, by considering a case study: telecom ticket retrieval, an open ended task with degrees of freedom in representation, architecture, and training data generation.
+We discover that autonomous research for open-ended problems with commercial and open-source agents shows both promise and limitations.
+Our best discovered single-model system (R@1 0.34) outperform a human-designed ensemble (R@1 0.25) yet suffer from operational overhead and fail to explore creative solutions like data augmentation, ensembling, or re-ranking, which the human-developed state-of-the-art system incorporates (R@1 0.38).</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-18">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Autonomous Research Project Management as an Agent Skill</h3>
+                  <p class="paper-authors">Alexander Chen, Jeffrey Meng, Bram Hoex, Tong Xie</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Autonomous Research Project Management as an Agent Skill</span></summary>
+                    <p>This work presents an end-to-end demonstration of autonomous machine learning research conducted by an agent skill on consumer hardware. The paper&#x27;s primary qualifying result – autonomously formulated, implemented, and benchmarked by the agent – establishes that exact Kernel Ridge Regression (KRR) on regular spatial grids can be solved in closed form in $O(N \log N)$ time and $O(N)$ memory. Using Block Circulant with Circulant Blocks (BCCB) embeddings and 2D-FFT spectral shrinkage, this approach eliminates the prohibitive $O(N^3)$ computational bottleneck of dense kernel methods without relying on basis approximations. Evaluated on 2,005 monthly fields of NOAA Kaplan SST v2 climate anomalies ($36 \times 72$ grid), the spectral solver matches a dense floored-torus reference within $2.62 \times 10^{-12}$ relative infinity-norm precision, achieving masked reconstruction RMSEs of $0.082\text{–}0.088$ ($\sim 14\%$ of field standard deviation). The autonomous workflow systematically characterised the non-periodic free-boundary gap (0.95 for Matérn-3/2, 0.12 for RBF), diagnosed localised split-conformal coverage breakdowns under spatial autocorrelation ($0.739\text{–}0.836$ at halo boundaries against a 0.90 target), and pre-registered a transfer-forecasting hypothesis that was rigorously refuted across 0/4 horizons.
+
+The research was autonomously executed by DeepSeek V4 Flash, orchestrated by our agent skill suite within DeepSeek Harness (DSH). Experiments were executed on CPU-only hardware (Apple M2 Pro; 78.7 s solver time, 1.57 GB peak RSS). Long-horizon state was decoupled into a file-based epic- and issue-tracking substrate. Across 74 sub-agent sessions, the agent demonstrated closed-loop scientific resilience: routing two failed hypothesis review gates back to literature retrieval, patching bootstrap indexing bugs, and executing with only four discrete human steering events. Finally, we reflect on autonomous research governance, arguing that scientific credibility requires inspectable state, falsifiable review gates, and transparent reporting of negative results, urging the machine learning community to favour agent-accessible structured formats over static PDF manuscripts.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-26">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>AutoPareto: Auditing Fixed-Time Autonomous  Transformer Search  with Matched-Exposure Verification</h3>
+                  <p class="paper-authors">Rami Alobaidy</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: AutoPareto: Auditing Fixed-Time Autonomous  Transformer Search  with Matched-Exposure Verification</span></summary>
+                    <p>When an autonomous researcher is evaluated under a fixed wall-clock budget, a
+faster program also trains on more data before it is scored, so the resource contract
+can bias what the search appears to discover. We examine this in AutoPareto, an
+autonomous Transformer researcher that edits its own training source under three
+measured objectives: validation quality, cached-decode throughput, and allocated
+inference memory on a single NVIDIA A40. After the agent produced its source-
+edit lineage, we froze seven archived recipes and retrained each on three unseen
+seeds at exactly matched token exposure. The discovery-stage quality advantage
+of the selected agent recipe does not persist under this verification, so it should not
+be read as an exposure-controlled quality improvement. Its inference-efficiency
+advantages do persist: at matched tokens, updates, and batch size, the recipe re-
+tains 1.99× cached-decode throughput with 41.7% fewer parameters and 35.1%
+less allocated inference memory. Resource contracts and exposure-controlled ver-
+ification therefore belong in the methodology of autonomous ML research, not
+only in its reporting.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-10">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Behavioural Signatures of a Language-Model Agent in Autonomous Vision-Architecture Research</h3>
+                  <p class="paper-authors">Aon Safdar, Mohamed Saadeldin</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Behavioural Signatures of a Language-Model Agent in Autonomous Vision-Architecture Research</span></summary>
+                    <p>Autonomous, agent-driven research is increasingly plausible, yet we have little concrete evidence of what a general-purpose language model actually does when given sustained responsibility for an open-ended research problem. We report a long-horizon study in which a single language-model agent acted as the sole researcher on a vision-architecture problem. Given only a framed question, an initial hypothesis, a compute allocation, and a small set of tools, the agent proposed, implemented, trained, and recorded more than a hundred sequential single-variable experiments with no human tactical input. It arrived at a channel-attention vision transformer that mixes tokens purely through attention over the channel axis, using no spatial self-attention at any stage, and drove it from a $69.67\%$ baseline to $96.59\%/97.25\%$ top-1 (100/300 epochs) on CIFAR-10 at $5.8$M parameters and to $85.07\%$ on CIFAR-100 at $22$M; on ImageNet-1K it reached $79.8\%$ at $26.6$M parameters and $3.7$ GFLOPs, matching DeiT-S at lower compute but about two points below the strongest published backbones. Beyond the artefact, we document and analyse a dense, reproducible behavioural signature: rapid early gains, a long saturation plateau, a persistent bias toward greedy incremental hypotheses, independent rediscovery (and one overturning) of established design choices, and recovery only after a human expanded the agent&#x27;s tools. We find this signature is shaped at least as much by the surrounding workflow as by the model itself. We release the architecture, the agent&#x27;s complete per-hypothesis record, and a behavioural analysis of the process, and discuss what autonomously-produced results imply for how such work should be verified and evaluated.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-27">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Born, Not Trained: Zero-Training Programs Out-Explore Reinforcement Learning for Game Testing at Equal Budget</h3>
+                  <p class="paper-authors">Andy Ye</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Born, Not Trained: Zero-Training Programs Out-Explore Reinforcement Learning for Game Testing at Equal Budget</span></summary>
+                    <p>Testing a game or simulation means driving it into rare states - the trigger for a planted bug or a level&#x27;s own win
+condition - and reaching them within the small interaction budget a QA pass can afford. The standard approach trains a
+reinforcement-learning explorer for each game, which is expensive, needs per-game tuning, and rarely transfers. We propose
+a different route. Rather than train a tester, an autonomous LLM-evolution loop writes one as a short program. The pipeline
+is an iterative evolutionary search, not a single prompt: over many generations, a proposal LLM writes and mutates
+candidate programs, and a multi-engine fitness keeps the ones that reach the most target states at a fixed budget,
+re-verifying every reported hit from a clean reset. Each candidate is a compact procedure over a save/restore archive of
+simulator states, saving promising states and returning to them to explore further. The winning program needs no training:
+it explores through an adaptive novelty signal and a small bandit over exploration moves that emerged from the search, and
+it is written once and reused. A single fresh-per-task prompt does not suffice; the strength comes from evolving one
+program against a diverse multi-engine fitness and transferring it. At an equal interaction budget, this single written
+program is the best method on four sparse-reward game-testing tasks spanning three engines, reaching on average 91% of
+the targets against 54% for tuned PPO, and less for every other baseline. It matches what trained RL needs roughly
+$16\times$ more interaction to reach, and it transfers to engines the search never saw. However, the advantage is bounded. It ties two saturated tasks a trivial baseline also solves, loses the one reward-dense task to PPO, and is overtaken only when PPO is given several times more interaction, so writing and training a tester are complementary
+regimes. The Kinetix planted-defect benchmark contributes the replay-from-reset verification backbone, and that same replay verifier caught the loop inflating its own score through a race in its evaluation harness, a self-check we expect autonomous research will
+increasingly need.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-41">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Forking Fast: Efficiently Estimating Uncertainty Dynamics in Text Generation</h3>
+                  <p class="paper-authors">Eric Bigelow, Amir Zur, Satchel Grant, Tal Haklay, Can Rager, Owen Lewis, Thomas McGrath, Jack Merullo, Ekdeep Singh Lubana, Atticus Geiger</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Forking Fast: Efficiently Estimating Uncertainty Dynamics in Text Generation</span></summary>
+                    <p>LLM reasoning is stochastic, and so understanding a model requires grappling with the distribution of reasoning chains that it might produce for a given question, i.e., its uncertainty. Resampling-based analyses characterize this distribution, revealing which steps of a rollout determine how the model arrives at its answer. However, a major limitation of these approaches is that resampling text sequences at every token or sentence in a reasoning chain is very costly. Our work strives to make resampling analysis more computationally efficient, while also shedding light on an important scientific question: what is the right statistical model for explaining uncertainty dynamics in text generation? We show that when resampling many reasoning chains, uncertainty dynamics converge to stable patterns, and noise is largely an artifact of sampling rather than an LLM&#x27;s sensitivity to each individual token or reasoning step. We develop a statistical model for smoothing noisy low-sample rollout data to better approximate high-sample data, allowing us to significantly cut sampling costs.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-49">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Geometric Attention Fine-Tuning Is Representation-Relative: Autonomous ML Research with AI-Native Workflow</h3>
+                  <p class="paper-authors">Yuhe Sui, Jianing Zhang, SHUFANG CHEN, 李晓彤, Wang Zimeng</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Geometric Attention Fine-Tuning Is Representation-Relative: Autonomous ML Research with AI-Native Workflow</span></summary>
+                    <p>Can explicit attention-compatibility adaptation add useful capacity beyond adapting query/key representations? We study this question through GeoAFT, an autonomous ML research programme managed by \emph{AI-Native Workflow}. At fixed hidden states, low-rank Q/K updates obey row-centered feature-subspace and rank constraints, while one-dimensional $\ell_1$ compatibility yields centered rank $N-1$; controlled interventions recover the reported static generators. On pretrained Web-of-Science classification, Q/K-LoRA rank 4 reaches $0.7291$ micro-F1 versus $0.5142$ for the geometry-bank residual, and matched specificity tests find $0/90$ head/layer cells where a named non-dot residual wins. Together these results establish a \emph{representation-relative} boundary: fixed-state compatibility complexity need not translate into transferable pretrained utility once representations can adapt. The autonomous system made a decisive contribution by executing the bounded positive search, escalating discriminating controls, preserving the evidence that changed the paper-level conclusion, and returning it for human scientific reconciliation. \sys\ supports this process with durable scientific intent, bounded execution, evidence-gated verification, and compact decision packets, targeting lower human-attention amount and intensity per unit of verified research progress.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-52">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Mapping LLM-Agent Engineering Decisions from the Literature with an Autonomous Research System</h3>
+                  <p class="paper-authors">Bryan Lincoln Marques de Oliveira, Daniel Machado Pedrozo, Luana Guedes Barros Martins, Telma Woerle de Lima Soares</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Mapping LLM-Agent Engineering Decisions from the Literature with an Autonomous Research System</span></summary>
+                    <p>Building a system around a large language model means making engineering decisions — how control flows, what memory persists, which tools the agent may call — that current survey coverage does not organize. We present a decision-level map of how these systems are engineered: 1,141 leaf engineering decisions organized into 35 themes over a corpus of 12,060 distinct works, each carrying its options, its placed works and a consensus status — 227 settled, 226 contested, 317 open and 371 thin. The named examples include settled interface conventions and open architecture questions, with counterexamples to both patterns. An autonomous agent ran the investigation end to end, from one OpenAlex query (28,886 records over the window; 22,701 under the academic filter, all fetched) through deduplication, screening of 14,533 distinct works, taxonomy induction, synthesis of all 1,141 decision nodes and 219 sealed full-text readings, to a manuscript draft. An audit of the sealed abstract-level extractions against the full texts finds pooled agreement of 41.2% (77 of 187 eligible readings), a finding about how papers in this corpus frame their contributions. For builders, the map names the conventions to inspect and the works behind them; for researchers, it names the comparisons that would settle what the corpus leaves open.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-39">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Open-Ended Autonomous Model Research for Recommendation Systems</h3>
+                  <p class="paper-authors">Ziqi Chen, Mohamed Hammad</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Open-Ended Autonomous Model Research for Recommendation Systems</span></summary>
+                    <p>We present an autonomous research system for open-ended model development in recommendation systems. At its core is a batch-wise, evidence-conditioned research loop: a central Researcher constructs hypothesis portfolios spanning new and promising prior directions, while independent Coder subagents implement and evaluate selected hypotheses in parallel. The system separates stochastic scientific reasoning from deterministic experiment execution and externalizes long-horizon state into persistent stores for hypotheses and analyses, experiment trials, and debugging knowledge. After the human-defined task contract is fixed, no human proposes the candidate hypotheses reported as qualifying results; without the agent-generated interventions, the corresponding results reduce to the human-provided reference configurations. Across two public recommendation benchmarks, the system develops non-monotonic research trajectories spanning architecture, objectives, representations, and optimization. On KuaiRand-1K, the strongest reviewed configuration improves the task-defined aggregate score from $0.1570$ to $0.2041$ (+30.0\%) and MRR from $0.0675$ to $0.0850$. Under our full-data KuaiRec protocol, the strongest reviewed configuration reduces MAE from $4.6621$ to $4.4517$ (-4.51\%) and increases XAUC from $0.5532$ to $0.6094$ (+0.0562) relative to the EGMN reference trained under the same protocol. We additionally report qualitative transfer evidence from a production-scale workload. Beyond final performance, we analyze the research process itself. A post-hoc taxonomy of 500 stored hypotheses characterizes task-specific differences in research emphasis and multi-family composition, while retrospective human audits uncover operationally successful but scientifically invalid trials. These failures expose a gap between reliable experiment execution and valid scientific evidence.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-34">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>Separating Real Improvements from Lucky Runs in Autonomous ML Research</h3>
+                  <p class="paper-authors">Pratham Grover</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: Separating Real Improvements from Lucky Runs in Autonomous ML Research</span></summary>
+                    <p>Autonomous ML research agents increasingly operate by proposing many candidate changes, evaluating them under noisy training, and selecting the strongest observed result. We study how reliably improvements selected by this process survive independent evaluation. In a controlled nanoGPT environment, we first run the same training program across 60 seeds. Selecting the best of 32 runs produces an expected apparent improvement of 0.00544 validation bits-per-byte (val_bpb), or 2.7 times our preregistered meaningful-effect threshold delta = 0.002, a gain produced entirely by selection. We then evaluate a frozen 24-candidate bank containing exact-null controls, benchmark interventions, and modifications produced by an autonomous agent without access to the sealed evaluation seeds. Across 749 training runs, nine candidates are exact nulls by construction. Of the remaining 15 candidates, eight independently replicate as meaningful improvements, three fail replication, and four remain inconclusive. The agent finds several large improvements near 0.014 val_bpb. In this regime, the effects are large relative to the experimental noise, and preregistered search and confirmation policies make no false declarations on this bank. The harder cases are the smaller improvements near delta, several of which remain unresolved even after 24-33 sealed evaluations. Large effects are readily confirmed, while gains near the scale of experimental noise require substantially more evidence to resolve.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-23">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>SixthView: Verified Hidden-View Reconstruction Reveals a Geometry Extraction Bottleneck</h3>
+                  <p class="paper-authors">Pooya Khosravi, Fnu pramono, Jen-Feng Chang, Da Kuang, Shuo Tang, Fangcheng Sun, Jiazhou Wang</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: SixthView: Verified Hidden-View Reconstruction Reveals a Geometry Extraction Bottleneck</span></summary>
+                    <p>Multiview benchmarks are meant to test three-dimensional reasoning, but their scores confound two failures. A model may reason poorly about a recovered scene, or it may never extract the scene from pixels. We introduce SixthView to separate these cases. Each task presents five orthographic views of a labeled polycube assembly and two renders of each loose piece, then asks for every cell in the sixth view. An exhaustive search over proper rotations and translations certifies that the symbolic piece geometry and observed grids imply a single target. Four vision-language models show a consistent representation gap on 587 certified items. With images alone, they solve only 12.7--21.5\% of trials exactly, even though mean cell accuracy reaches 75.2--88.2\%. Adding exact geometry raises exact-grid accuracy by 19.9--74.6 percentage points. Once geometry is present, adding images changes accuracy by no more than 2.1 points. The result localizes the main failure in this setting to geometric extraction rather than hidden-view composition. Cria is a stateful autonomous research system that connects hypotheses to code, experiments, validation records, and review. It formulated the study and built the generator, verifier, evaluation pipeline, and analysis. Human authors steered selected design choices and approved the evidence. Without this autonomous contribution, the qualifying result could not have been established.</p>
+                  </details>
+                </li>
+                <li class="accepted-paper" id="paper-11">
+                  <p class="paper-type paper-type-poster">Poster</p>
+                  <h3>When Does a VAE Mix? Aggregate-Posterior KL, Mutual Information, and Encode--Decode Gibbs Chains</h3>
+                  <p class="paper-authors">Ahmad Ayaz Amin, Guanghui Wang</p>
+                  <details class="paper-abstract">
+                    <summary>Abstract<span class="sr-only">: When Does a VAE Mix? Aggregate-Posterior KL, Mutual Information, and Encode--Decode Gibbs Chains</span></summary>
+                    <p>We study the Markov chain obtained by alternating a variational autoencoder (VAE) decoder and encoder,
+$z_t\to x_t\sim p_\theta(x\mid z_t)\to z_{t+1}\sim q_\phi(z\mid x_t)$, initialized at the reference prior. The \textbf{qualifying autonomous result} is a decomposition of its sampling behavior: when encoder and decoder are compatible with the variational joint $Q_\phi(x,z)=p_{\rm data}(x)q_\phi(z\mid x)$, the aggregate-posterior term $KL(q_\phi(z)\Vert p(z))$ is exactly the target-to-initialization KL, while $X$--$Z$ dependence controls chain memory. Zero mutual information gives exact one-sweep latent mixing. For linear-Gaussian VAEs, canonical correlations $r_i$ give latent transition eigenvalues $\lambda_i=r_i^2$, autocorrelation $\lambda_i^\ell$, and $MI=-\frac12\sum_i\log(1-\lambda_i)$. Controlled experiments show that the same one nat of MI can yield worst-direction integrated autocorrelation time (IAT) $1.57$ or $13.78$, depending on how information is distributed across latent modes. A population-trained linear $\beta$-VAE further shows that low MI can make the chain fast while incompatibility makes it converge to the wrong stationary law. The resulting diagnostic separates \emph{initialization error}, \emph{memory}, and \emph{target correctness}.</p>
+                  </details>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main shell">
+        <p>Make autonomous research visible.<br>Keep human judgment central.</p>
+        <div><a href="/papers/">Accepted papers</a><a href="/#call">Call for papers</a><a href="/#format">Format</a><a href="/#people">People</a><a href="/#contact">Contact</a></div>
+      </div>
+      <div class="footer-meta shell"><span>Workshop for Autonomous Machine Learning Research · NeurIPS 2026</span></div>
+    </footer>
+
+  </body>
+</html>

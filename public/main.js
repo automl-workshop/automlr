@@ -47,18 +47,17 @@ function revealHero() {
 function setupNavTracking() {
   const links = new Map();
   document.querySelectorAll(".nav-index").forEach((a) => {
-    const id = a.getAttribute("href")?.replace("#", "");
-    if (id) links.set(id, a);
+    const href = a.getAttribute("href");
+    if (href?.startsWith("#")) links.set(href.slice(1), a);
   });
   if (!("IntersectionObserver" in window) || links.size === 0) return;
 
-  // Sections we observe; practical folds into Format, contact into Submit.
+  // Sections we observe; practical folds into Format.
   const observed = ["about", "call", "format", "practical", "people", "submit", "contact"];
 
   const nearestLink = (id) => {
     if (links.has(id)) return links.get(id);
     if (id === "practical") return links.get("format");
-    if (id === "contact") return links.get("submit");
     return null;
   };
 

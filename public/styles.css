@@ -514,6 +514,96 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 10px;
 }
 
+/* ---------- accepted papers ---------- */
+.papers-title {
+  font-family: var(--serif-display);
+  font-size: var(--type-section);
+  font-weight: 360;
+  line-height: 1.18;
+  margin: 0 0 24px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.paper-group-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+}
+.article-body .paper-group-title {
+  font-size: clamp(26px, 4vw, 32px);
+  margin: 0;
+  padding: 0;
+}
+.article-body .paper-group-title::after { display: none; }
+.paper-count {
+  font-family: var(--mono);
+  font-size: var(--type-label);
+  color: var(--muted);
+}
+.paper-jump-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+  font-family: var(--mono);
+  font-size: var(--type-label);
+}
+.paper-jump-links a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line-strong);
+  color: var(--accent);
+}
+.paper-jump-links a:hover { background: var(--accent-wash); }
+.paper-jump-links a span { color: var(--muted); }
+.paper-group { margin-top: 56px; scroll-margin-top: 100px; }
+.accepted-paper-list { list-style: none; padding: 0; margin: 0; }
+.accepted-paper { padding: 22px 0; border-bottom: 1px solid var(--line); }
+.paper-type {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 3px 9px;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: var(--type-label);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.paper-type-oral { color: var(--accent-deep); background: var(--accent-wash); }
+.paper-type-spotlight { color: var(--author-signal); }
+.paper-type-poster { color: var(--ink-soft); background: var(--surface); }
+.accepted-paper h3 {
+  font-family: var(--serif-display);
+  font-weight: 420;
+  font-size: var(--type-subhead);
+  line-height: 1.35;
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+}
+.paper-authors {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-size: var(--type-small);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.paper-abstract summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: var(--type-label);
+}
+.paper-abstract p { margin: 16px 0 0; white-space: pre-line; overflow-wrap: anywhere; }
+
 /* ---------- prose ---------- */
 .lead {
   font-size: var(--type-lead);
@@ -1411,7 +1501,7 @@ blockquote p:last-child { margin-bottom: 0; }
   .people-group dd { text-align: left; }
 }
 
-/* Under 400px keep 2 primary links + Submit so the numbered-index nav
+/* Under 400px keep 2 primary links + Papers so the numbered-index nav
    identity survives (rather than collapsing to a lone button). */
 @media (max-width: 400px) {
   :root { --type-display: 46px; }
