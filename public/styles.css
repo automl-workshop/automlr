@@ -966,6 +966,8 @@ blockquote p:last-child { margin-bottom: 0; }
   color: var(--accent);
 }
 .schedule { border-top: 1px solid var(--line-strong); }
+.program-outline { margin: 20px 0 0; padding-left: 24px; }
+.program-outline li { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .schedule .time { min-width: 92px; }
 
 .small-note {
