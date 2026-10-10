@@ -14,6 +14,7 @@ Invited speakers
 - `mengdi-wang.jpg`
 - `sherry-yang.jpg`
 - `nik-dawson.jpg`
+- `marian-andrei-rizoiu.png`
 
 Organizing committee
 - `arjun-prakash.jpg`
